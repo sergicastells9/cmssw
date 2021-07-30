@@ -4,7 +4,7 @@
     </class>
     <class name="std::vector<nanoaod::FlatTable::Column>" />
     <class name="nanoaod::FlatTable" ClassVersion="4">
-        <version ClassVersion="4" checksum="1191780265"/>
+        <version ClassVersion="4" checksum="596055848"/>
         <version ClassVersion="3" checksum="2443023556"/>
     </class>
     <class name="nanoaod::FlatTable::RowView" transient="true" />
