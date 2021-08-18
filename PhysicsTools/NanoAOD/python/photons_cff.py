@@ -178,12 +178,27 @@ photonTable = cms.EDProducer("SimpleCandidateFlatTableProducer",
         jetIdx = Var("?hasUserCand('jet')?userCand('jet').key():-1", int, doc="index of the associated jet (-1 if none)"),
         electronIdx = Var("?hasUserCand('electron')?userCand('electron').key():-1", int, doc="index of the associated electron (-1 if none)"),
         energyErr = Var("getCorrectedEnergyError('regression2')",float,doc="energy error of the cluster from regression",precision=6),
+        energyRaw = Var("superCluster().rawEnergy()",float,doc="raw energy of photon supercluster", precision=10),
         r9 = Var("full5x5_r9()",float,doc="R9 of the supercluster, calculated with full 5x5 region",precision=10),
         sieie = Var("full5x5_sigmaIetaIeta()",float,doc="sigma_IetaIeta of the supercluster, calculated with full 5x5 region",precision=10),
+        sieip = Var(
+            "full5x5_showerShapeVariables().sigmaIetaIphi",
+            float,
+            doc="sigma_IetaIphi of the supercluster, calculated with full 5x5 region",
+            precision=10,
+        ),
+        s4 = Var(
+            "full5x5_showerShapeVariables().e2x2/full5x5_showerShapeVariables().e5x5",
+            float,
+            doc="e2x2/e5x5 ('s4') of the supercluster, calculated with full 5x5 region",
+            precision=10,
+        ),
+        etaWidth = Var("superCluster().etaWidth()",float,doc="Width of the photon supercluster in eta", precision=10),
+        phiWidth = Var("superCluster().phiWidth()",float,doc="Width of the photon supercluster in phi", precision=10),
         cutBased = Var(
             "userInt('cutbasedID_loose')+userInt('cutbasedID_medium')+userInt('cutbasedID_tight')",
             int,
-            doc="cut-based ID bitmap, Fall17V2, (0:fail, 1:loose, 2:medium, 3:tight)"
+            doc="cut-based ID bitmap, Fall17V2, (0:fail, 1:loose, 2:medium, 3:tight)",
         ),
         cutBased_Fall17V1Bitmap = Var(
             "userInt('cutbasedIDV1_loose')+2*userInt('cutbasedIDV1_medium')+4*userInt('cutbasedIDV1_tight')",
@@ -193,7 +208,7 @@ photonTable = cms.EDProducer("SimpleCandidateFlatTableProducer",
         vidNestedWPBitmap = Var(
             "userInt('VIDNestedWPBitmap')",
             int,
-            doc="Fall17V2 " + make_bitmapVID_docstring(photon_id_modules_WorkingPoints_nanoAOD)
+            doc="Fall17V2 " + make_bitmapVID_docstring(photon_id_modules_WorkingPoints_nanoAOD),
         ),
         electronVeto = Var("passElectronVeto()",bool,doc="pass electron veto"),
         pixelSeed = Var("hasPixelSeed()",bool,doc="has pixel seed"),
@@ -204,25 +219,34 @@ photonTable = cms.EDProducer("SimpleCandidateFlatTableProducer",
         cutBased_Spring16V2p2 = Var(
             "userInt('cutID_Spring16_loose')+userInt('cutID_Spring16_medium')+userInt('cutID_Spring16_tight')",
             int,
-            doc="cut-based ID bitmap, Spring16V2p2, (0:fail, 1:loose, 2:medium, 3:tight)"
+            doc="cut-based ID bitmap, Spring16V2p2, (0:fail, 1:loose, 2:medium, 3:tight)",
         ),
         mvaID_Spring16nonTrigV1 = Var(
             "userFloat('mvaID_Spring16nonTrigV1')",
             float,
             doc="MVA ID score, Spring16nonTrigV1",
-            precision=10
+            precision=10,
         ),
         vidNestedWPBitmap_Spring16V2p2 = Var(
             "userInt('VIDNestedWPBitmap_Spring16V2p2')",
             int,
-            doc="Spring16V2p2 " + make_bitmapVID_docstring(photon_id_modules_WorkingPoints_nanoAOD_Spring16V2p2)
+            doc="Spring16V2p2 " + make_bitmapVID_docstring(photon_id_modules_WorkingPoints_nanoAOD_Spring16V2p2),
         ),
+        pfPhoIso03 = Var("photonIso()",float,doc="PF absolute isolation dR=0.3, photon component (uncorrected)"),
+        trkSumPtHollowConeDR03 = Var("trkSumPtHollowConeDR03()",float,doc="Sum of track pT in a hollow cone of outer radius, inner radius"),
+        chargedHadronIso = Var("chargedHadronIso()",float,doc="charged hadron isolation with dxy,dz match to pv"),
+        pfChargedIsoPFPV = Var("chargedHadronPFPVIso()",float,doc="PF absolute isolation dR=0.3, charged component (PF PV only)"),
+        pfChargedIsoWorstVtx = Var("chargedHadronWorstVtxIso()",float,doc="PF absolute isolation dR=0.3, charged component (Vertex with largest isolation)"),
         pfRelIso03_chg = Var("userFloat('PFIsoChg')/pt",float,doc="PF relative isolation dR=0.3, charged component (with rho*EA PU corrections)"),
         pfRelIso03_all = Var("userFloat('PFIsoAll')/pt",float,doc="PF relative isolation dR=0.3, total (with rho*EA PU corrections)"),
         hoe = Var("hadronicOverEm()",float,doc="H over E",precision=8),
         isScEtaEB = Var("abs(superCluster().eta()) < 1.4442",bool,doc="is supercluster eta within barrel acceptance"),
         isScEtaEE = Var("abs(superCluster().eta()) > 1.566 && abs(superCluster().eta()) < 2.5",bool,doc="is supercluster eta within endcap acceptance"),
         seedGain = Var("userInt('seedGain')","uint8",doc="Gain of the seed crystal"),
+        # position of photon is best approximated by position of seed cluster, not the SC centroid
+        x_calo = Var("superCluster().seed().position().x()",float,doc="photon supercluster position on calorimeter, x coordinate (cm)",precision=10),
+        y_calo = Var("superCluster().seed().position().y()",float,doc="photon supercluster position on calorimeter, y coordinate (cm)",precision=10),
+        z_calo = Var("superCluster().seed().position().z()",float,doc="photon supercluster position on calorimeter, z coordinate (cm)",precision=10),
     )
 )
 
