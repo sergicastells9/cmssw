@@ -96,8 +96,7 @@ process.configurationMetadata = cms.untracked.PSet(
 
 # Output definition
 
-#process.NANOAODSIMoutput = cms.OutputModule("NanoAODOutputModule",
-process.NANOAODSIMoutput = cms.OutputModule("PoolOutputModule",
+process.NANOAODSIMoutput = cms.OutputModule("NanoAODOutputModule",
     compressionAlgorithm = cms.untracked.string('LZMA'),
     compressionLevel = cms.untracked.int32(9),
     dataset = cms.untracked.PSet(
@@ -105,6 +104,7 @@ process.NANOAODSIMoutput = cms.OutputModule("PoolOutputModule",
         filterName = cms.untracked.string('')
     ),
     fileName = cms.untracked.string('file:HIG-RunIISummer19UL17NanoAODv2-00001.root'),
+    fakeNameForCrab =cms.untracked.bool(True),
     outputCommands = process.NANOAODSIMEventContent.outputCommands
 )
 

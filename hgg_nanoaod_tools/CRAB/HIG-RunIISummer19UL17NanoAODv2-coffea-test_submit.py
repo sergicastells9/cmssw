@@ -25,8 +25,7 @@ config.Data.totalUnits           = -1
 config.Data.publication          = True
 
 # This string is used to construct the output dataset name
-config.Data.outputDatasetTag = 'RunIISummer19UL17MiniAOD-106X_mc2017_realistic_v6-v2'
-config.Data.outLFNDirBase        = '/store/user/gallim/HggNanoPublic/'
+config.Data.outLFNDirBase        = '/store/user/gallim/HggNanoLeoHint/'
 
 config.section_('Site')
 # Where the output files will be transmitted to
