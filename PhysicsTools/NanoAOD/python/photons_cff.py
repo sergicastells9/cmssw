@@ -247,6 +247,9 @@ photonTable = cms.EDProducer("SimpleCandidateFlatTableProducer",
         x_calo = Var("superCluster().seed().position().x()",float,doc="photon supercluster position on calorimeter, x coordinate (cm)",precision=10),
         y_calo = Var("superCluster().seed().position().y()",float,doc="photon supercluster position on calorimeter, y coordinate (cm)",precision=10),
         z_calo = Var("superCluster().seed().position().z()",float,doc="photon supercluster position on calorimeter, z coordinate (cm)",precision=10),
+        # Preshower variables
+        esEffSigmaRR = Var("full5x5_showerShapeVariables().effSigmaRR()", float, doc=""),
+        esEnergyOverRawE = Var("superCluster().preshowerEnergy()/superCluster().rawEnergy()", float, doc=""),
     )
 )
 
