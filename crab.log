@@ -1,0 +1,59 @@
+DEBUG 2023-05-24 14:53:33.015 UTC: 	 CRAB Client version: v3.230417
+DEBUG 2023-05-24 14:53:33.015 UTC: 	 Running on: Linux lxplus746.cern.ch 3.10.0-1160.88.1.el7.x86_64 #1 SMP Tue Mar 7 15:41:52 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2023-05-24 14:53:33.015 UTC: 	 Executing command: 'checkwrite'
+DEBUG 2023-05-24 14:53:33.031 UTC: 	 Found CRAB cache file /afs/cern.ch/user/c/castells/.crab3
+DEBUG 2023-05-24 14:53:33.069 UTC: 	 Checking credentials
+DEBUG 2023-05-24 14:53:33.069 UTC: 	 Found proxy file /tmp/x509up_u125472
+DEBUG 2023-05-24 14:53:33.069 UTC: 	 Making sure it has proper VOMS extension
+DEBUG 2023-05-24 14:53:33.069 UTC: 	 Executing command :
+ voms-proxy-info --vo --file /tmp/x509up_u125472
+DEBUG 2023-05-24 14:53:34.315 UTC: 	 output : cms
+
+ error: 
+ retcode : 0
+DEBUG 2023-05-24 14:53:34.315 UTC: 	 Getting proxy life time left
+DEBUG 2023-05-24 14:53:34.315 UTC: 	 Executing command :
+ voms-proxy-info --actimeleft --timeleft --file /tmp/x509up_u125472
+DEBUG 2023-05-24 14:53:35.811 UTC: 	 output : 42961
+42960
+
+ error: 
+ retcode : 0
+DEBUG 2023-05-24 14:53:35.811 UTC: 	 Proxy valid for 11:56:00 hours
+DEBUG 2023-05-24 14:53:35.812 UTC: 	 Command use: checkwrite
+DEBUG 2023-05-24 14:53:35.812 UTC: 	 Options use: ['--site=T3_CH_CERNBOX']
+DEBUG 2023-05-24 14:53:35.812 UTC: 	 Instance is None
+DEBUG 2023-05-24 14:53:35.812 UTC: 	 Server base url is None
+DEBUG 2023-05-24 14:53:35.812 UTC: 	 Retrieving username ...
+DEBUG 2023-05-24 14:53:35.812 UTC: 	 Retrieving username from CRIC...
+DEBUG 2023-05-24 14:53:36.723 UTC: 	 username is castells
+INFO 2023-05-24 14:53:36.724 UTC: 	 Will check write permission in the default location /store/user/<username>
+INFO 2023-05-24 14:53:36.724 UTC: 	 Validating LFN /store/user/castells...
+INFO 2023-05-24 14:53:36.724 UTC: 	 LFN /store/user/castells is valid.
+INFO 2023-05-24 14:53:36.817 UTC: 	 Will use `gfal-copy`, `gfal-rm` commands for checking write permissions
+INFO 2023-05-24 14:53:36.817 UTC: 	 Will check write permission in /store/user/castells on site T3_CH_CERNBOX
+INFO 2023-05-24 14:53:46.213 UTC: 	 Will use PFN: davs://eosuserhttp.cern.ch:443//eos/user/c/castells/crab3checkwrite_20230524_165336/crab3checkwrite_20230524_165336.tmp
+INFO 2023-05-24 14:53:46.214 UTC: 	 
+Attempting to create (dummy) directory crab3checkwrite_20230524_165336 and copy (dummy) file crab3checkwrite_20230524_165336.tmp to /store/user/castells
+
+INFO 2023-05-24 14:53:46.231 UTC: 	 Executing command: which scram >/dev/null 2>&1 && eval `scram unsetenv -sh`; gfal-copy -p -v -t 180 file:///eos/home-c/castells/CMS-DAS/pre-exercises/CMSSW_10_6_18/src/crab3checkwrite_20230524_165336.tmp 'davs://eosuserhttp.cern.ch:443//eos/user/c/castells/crab3checkwrite_20230524_165336/crab3checkwrite_20230524_165336.tmp'
+INFO 2023-05-24 14:53:46.231 UTC: 	 Please wait...
+INFO 2023-05-24 14:53:48.222 UTC: 	 
+Successfully created directory crab3checkwrite_20230524_165336 and copied file crab3checkwrite_20230524_165336.tmp to /store/user/castells
+INFO 2023-05-24 14:53:48.222 UTC: 	 
+Attempting to delete file davs://eosuserhttp.cern.ch:443//eos/user/c/castells/crab3checkwrite_20230524_165336/crab3checkwrite_20230524_165336.tmp
+
+INFO 2023-05-24 14:53:48.222 UTC: 	 Executing command: which scram >/dev/null 2>&1 && eval `scram unsetenv -sh`; gfal-rm -v -t 180 'davs://eosuserhttp.cern.ch:443//eos/user/c/castells/crab3checkwrite_20230524_165336/crab3checkwrite_20230524_165336.tmp'
+INFO 2023-05-24 14:53:48.222 UTC: 	 Please wait...
+INFO 2023-05-24 14:53:49.180 UTC: 	 
+Successfully deleted file davs://eosuserhttp.cern.ch:443//eos/user/c/castells/crab3checkwrite_20230524_165336/crab3checkwrite_20230524_165336.tmp
+INFO 2023-05-24 14:53:49.180 UTC: 	 
+Attempting to delete directory davs://eosuserhttp.cern.ch:443//eos/user/c/castells/crab3checkwrite_20230524_165336/
+
+INFO 2023-05-24 14:53:49.180 UTC: 	 Executing command: which scram >/dev/null 2>&1 && eval `scram unsetenv -sh`; gfal-rm -r -v -t 180 'davs://eosuserhttp.cern.ch:443//eos/user/c/castells/crab3checkwrite_20230524_165336/'
+INFO 2023-05-24 14:53:49.180 UTC: 	 Please wait...
+INFO 2023-05-24 14:53:50.322 UTC: 	 
+Successfully deleted directory davs://eosuserhttp.cern.ch:443//eos/user/c/castells/crab3checkwrite_20230524_165336/
+INFO 2023-05-24 14:53:50.329 UTC: 	 
+Checkwrite Result:
+INFO 2023-05-24 14:53:50.329 UTC: 	 Success: Able to write in /store/user/castells on site T3_CH_CERNBOX
