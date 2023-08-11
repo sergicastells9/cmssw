@@ -5,8 +5,13 @@ import os
 import shutil
 import argparse
 import json
-import CRABClient
-from CRABAPI.RawCommand import crabCommand
+try:
+    import CRABClient
+    from CRABAPI.RawCommand import crabCommand
+except:
+    print("\n!!!!!\nRun this first: source /cvmfs/cms.cern.ch/common/crab-setup.sh\n!!!!!\n")
+    raise
+
 
 def generateSubmit(dataset, cfg, year):
     submit = f"""
@@ -36,7 +41,7 @@ config.Data.lumiMask             = ''
 #config.Data.unitsPerJob          = 30
 config.Data.totalUnits           = -1
 config.Data.publication          = False
-config.Data.outLFNDirBase        = '/store/user/castells/outputs/MNConversion_{year}/'
+config.Data.outLFNDirBase        = '/store/user/castells/outputs/MNConversion_{cfg}/'
 
 # This string is used to construct the output dataset name
 config.section_('Site')
@@ -47,45 +52,34 @@ config.Site.storageSite          = 'T3_CH_CERNBOX'
     with open(f"{cfg}_{year}_submit.py", "w") as file:
         file.write(submit)
 
-def run_crab():
+def run_crab(args):
     # Remove any previous CRAB submission directories
     if(os.path.exists("./MNConversion_crab/")):
         shutil.rmtree("./MNConversion_crab/")
         print("Removed old CRAB submission directories.")
 
     # Load in datasets from json
-    with open("MC_Datasets.json") as file:
+    with open("Data_Datasets.json") as file:
         datasets = json.load(file)
 
     # Generate cfg with cmsDriver for each dataset and submit to crab
-    for mc in ["MC_Signal", "MC_Background"]:
-        if args.all:
-            pass
-        elif args.signal and mc == "MC_Background":
-            continue
-        elif args.background and mc == "MC_Signal":
-            continue
+    for year in ["2018A", "2018B", "2018C", "2018D"]:
+        for dataset in datasets["Data"][f"{year}"]["files"]:
+            GT = datasets["Data"][f"{year}"]["GT"]
+            era = datasets["Data"][f"{year}"]["era"]
+            cfg = dataset.split("/")[1] + "_reset"
 
-        for year in range(2016,2019,1):
-            for dataset in datasets[f"{mc}"][f"{year}"]["files"]:
-                GT = datasets[f"{mc}"][f"{year}"]["GT"]
-                era = datasets[f"{mc}"][f"{year}"]["era"]
-                cfg = dataset.split("/")[1]
+            # Generate cfg
+            subprocess.run(["cmsDriver.py", "--python_filename", f"{cfg}_{year}_cfg.py", "--eventcontent", "NANOAODSIM", "--customise", "Configuration/DataProcessing/Utils.addMonitoring", "--datatier", "NANOAODSIM", "--fileout", f"file:{cfg}_{year}.root", "--conditions", f"{GT}", "--step", "NANO", "--filein", f"dbs:{dataset}", "--era", f"Run2_{year[:-1]},{era}", "--mc", "-n", "-1", "--no_exec"])
 
-                # Generate cfg
-                subprocess.run(["cmsDriver.py", "--python_filename", f"{cfg}_{year}_cfg.py", "--eventcontent", "NANOAODSIM", "--customise", "Configuration/DataProcessing/Utils.addMonitoring", "--datatier", "NANOAODSIM", "--fileout", f"file:{cfg}_{year}.root", "--conditions", f"{GT}", "--step", "NANO", "--filein", f"dbs:{dataset}", "--era", f"Run2_{year},{era}", "--mc", "-n", "-1", "--no_exec"])
-
+            if not args.gen:
                 # Generate submit script and submit to CRAB
                 generateSubmit(dataset, cfg, year)
                 subprocess.run(f"crab submit -c {cfg}_{year}_submit.py", shell=True)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Specifies what samples to convert from miniAOD to nanoAOD.")
-    sample_parser = parser.add_mutually_exclusive_group(required=True)
-    sample_parser.add_argument('--signal', dest='signal', action='store_true', help='Run over only signals.')
-    sample_parser.add_argument('--background', dest='background', action='store_true', help='Run over only backgrounds.')
-    sample_parser.add_argument('--all', dest='all', action='store_true', help='Run over all samples.')
+    parser.add_argument("-gen", "--gen-only", dest="gen", action="store_true", help="Only generate config file without submitting.")
     args = parser.parse_args()
 
-    run_crab()
-
+    run_crab(args)
