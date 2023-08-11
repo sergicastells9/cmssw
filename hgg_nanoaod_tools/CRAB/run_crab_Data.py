@@ -21,12 +21,14 @@ config = Configuration()
 
 config.section_('General')
 config.General.workArea          =  'MNConversion_crab'
-config.General.requestName	 =  'MNConversion_{cfg}_data'
-config.General.transferLogs	 =  True
+config.General.requestName	     =  'MNConversion_{cfg}_data'
+config.General.transferLogs	     =  True
 config.General.transferOutputs   =  True
 
 config.section_('JobType')
 config.JobType.pluginName        = 'Analysis'
+config.JobType.numCores          = 8
+config.JobType.maxMemoryMB       = 20000
 
 # Name of the CMSSW configuration file
 config.JobType.psetName          = '{cfg}_data_cfg.py'
@@ -38,7 +40,7 @@ config.Data.inputDataset         = '{dataset}'
 config.Data.inputDBS             = 'global'
 config.Data.splitting            = 'Automatic'
 config.Data.lumiMask             = ''
-#config.Data.unitsPerJob          = 30
+#config.Data.unitsPerJob         = 30
 config.Data.totalUnits           = -1
 config.Data.publication          = False
 config.Data.outLFNDirBase        = '/store/user/castells/outputs/MNConversion_{cfg}/'
@@ -70,7 +72,7 @@ def run_crab(args):
             cfg = year
 
             # Generate cfg
-            subprocess.run(["cmsDriver.py", "--python_filename", f"{cfg}_data_cfg.py", "--eventcontent", "NANOAODSIM", "--customise", "Configuration/DataProcessing/Utils.addMonitoring", "--datatier", "NANOAODSIM", "--fileout", f"file:{cfg}_data.root", "--conditions", f"{GT}", "--step", "NANO", "--filein", f"dbs:{dataset}", "--era", f"Run2_{year[:-1]},{era}", "--mc", "-n", "-1", "--no_exec"])
+            subprocess.run(["cmsDriver.py", "--python_filename", f"{cfg}_data_cfg.py", "--eventcontent", "NANOAOD", "--customise", "Configuration/DataProcessing/Utils.addMonitoring", "--datatier", "NANOAOD", "--fileout", f"file:{cfg}_data.root", "--conditions", f"{GT}", "--step", "NANO", "--filein", f"dbs:{dataset}", "--era", f"Run2_{year[:-1]},{era}", "-n", "-1", "--no_exec", "--nThreads", "8"])
 
             if not args.gen:
                 # Generate submit script and submit to CRAB
