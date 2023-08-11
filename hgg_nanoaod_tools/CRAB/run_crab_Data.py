@@ -13,7 +13,7 @@ except:
     raise
 
 
-def generateSubmit(dataset, cfg, year):
+def generateSubmit(dataset, cfg):
     submit = f"""
 from WMCore.Configuration import Configuration
 
@@ -21,7 +21,7 @@ config = Configuration()
 
 config.section_('General')
 config.General.workArea          =  'MNConversion_crab'
-config.General.requestName	 =  'MNConversion_{cfg}_{year}'
+config.General.requestName	 =  'MNConversion_{cfg}_data'
 config.General.transferLogs	 =  True
 config.General.transferOutputs   =  True
 
@@ -29,7 +29,7 @@ config.section_('JobType')
 config.JobType.pluginName        = 'Analysis'
 
 # Name of the CMSSW configuration file
-config.JobType.psetName          = '{cfg}_{year}_cfg.py'
+config.JobType.psetName          = '{cfg}_data_cfg.py'
 config.JobType.priority          = 30
 
 config.section_('Data')
@@ -49,7 +49,7 @@ config.section_('Site')
 config.Site.storageSite          = 'T3_CH_CERNBOX'
     """
 
-    with open(f"{cfg}_{year}_submit.py", "w") as file:
+    with open(f"{cfg}_data_submit.py", "w") as file:
         file.write(submit)
 
 def run_crab(args):
@@ -67,15 +67,16 @@ def run_crab(args):
         for dataset in datasets["Data"][f"{year}"]["files"]:
             GT = datasets["Data"][f"{year}"]["GT"]
             era = datasets["Data"][f"{year}"]["era"]
-            cfg = dataset.split("/")[1] + "_reset"
+            cfg = year
 
             # Generate cfg
-            subprocess.run(["cmsDriver.py", "--python_filename", f"{cfg}_{year}_cfg.py", "--eventcontent", "NANOAODSIM", "--customise", "Configuration/DataProcessing/Utils.addMonitoring", "--datatier", "NANOAODSIM", "--fileout", f"file:{cfg}_{year}.root", "--conditions", f"{GT}", "--step", "NANO", "--filein", f"dbs:{dataset}", "--era", f"Run2_{year[:-1]},{era}", "--mc", "-n", "-1", "--no_exec"])
+            subprocess.run(["cmsDriver.py", "--python_filename", f"{cfg}_data_cfg.py", "--eventcontent", "NANOAODSIM", "--customise", "Configuration/DataProcessing/Utils.addMonitoring", "--datatier", "NANOAODSIM", "--fileout", f"file:{cfg}_data.root", "--conditions", f"{GT}", "--step", "NANO", "--filein", f"dbs:{dataset}", "--era", f"Run2_{year[:-1]},{era}", "--mc", "-n", "-1", "--no_exec"])
 
             if not args.gen:
                 # Generate submit script and submit to CRAB
-                generateSubmit(dataset, cfg, year)
-                subprocess.run(f"crab submit -c {cfg}_{year}_submit.py", shell=True)
+                generateSubmit(dataset, cfg)
+                subprocess.run(f"crab submit -c {cfg}_data_submit.py", shell=True)
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Specifies what samples to convert from miniAOD to nanoAOD.")
