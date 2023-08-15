@@ -4,6 +4,7 @@ __init__.py
 .#*
 #*#
 *~
+hgg_nanoaod_tools/CRAB/cfgs/*
 hgg_nanoaod_tools/CRAB/cfgs/2018_data_cfg_0.py
 hgg_nanoaod_tools/CRAB/cfgs/2018_data_cfg_1.py
 hgg_nanoaod_tools/CRAB/cfgs/2018_data_cfg_2.py
@@ -500,3 +501,4 @@ hgg_nanoaod_tools/CRAB/cfgs/2018_data_cfg_492.py
 hgg_nanoaod_tools/CRAB/cfgs/2018_data_cfg_493.py
 hgg_nanoaod_tools/CRAB/cfgs/2018_data_cfg_494.py
 hgg_nanoaod_tools/CRAB/cfgs/2018_data_cfg_495.py
+hgg_nanoaod_tools/CRAB/cfgs/2018A_data_cfg_0.py
