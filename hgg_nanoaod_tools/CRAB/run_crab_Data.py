@@ -5,12 +5,69 @@ import os
 import shutil
 import argparse
 import json
+from tdqm import tdqm
 try:
     import CRABClient
     from CRABAPI.RawCommand import crabCommand
 except:
     print("\n!!!!!\nRun this first: source /cvmfs/cms.cern.ch/common/crab-setup.sh\n!!!!!\n")
     raise
+
+
+def generateCfg(
+    f: str,
+    cfg_path: str,
+    files_per_job: int = 6
+) -> List:
+
+    submit = []
+    dataset = set()
+    new_cfgs = []
+    cut = -1
+    count = 0
+
+    with open(f, "r") as fin:
+        files = False
+        lines = fin.readlines()
+
+        for idx, line in enumerate(lines):
+            if ") )," in line:
+                files = False
+
+            if files:
+                dataset.add(
+                    line.strip().replace(",", "")
+                )
+                count += 1
+            elif not files:
+                submit.append(line)
+            
+            if "fileNames = cms.untracked.vstring(" in line:
+                cut = idx + 1
+                files = True
+
+    print("Loaded samples and cfg file")
+    dataset = list(dataset)
+
+    if not os.path.exists("./cfgs/"):
+        os.mkdir("./cfgs/")
+
+    for cfg in tqdm(range(int(len(dataset) / files_per_job) + 1)):
+        new_path = f"./cfgs/{cfg_path}_{cfg}.py"
+        new_cfgs.append(new_path)
+
+        with open(new_path, "w") as fout:
+            for line in submit[:cut]:
+                fout.write(line)
+            
+            for data in dataset[cfg * files_per_job : (cfg + 1) * files_per_job if cfg < len(dataset) - files_per_job else -1]:
+                fout.write(f"\t{data},\n")
+            
+            for line in submit[cut:]:
+                fout.write(line)
+
+    print(f"Generated new cfg files for {f}")
+    return new_cfgs
 
 
 def generateSubmit(dataset, cfg):
@@ -51,8 +108,11 @@ config.section_('Site')
 config.Site.storageSite          = 'T3_CH_CERNBOX'
     """
 
-    with open(f"{cfg}_data_submit.py", "w") as file:
+    path = f"{cfg}_data_submit.py"
+    with open(path, "w") as file:
         file.write(submit)
+    
+    return path
 
 def run_crab(args):
     # Remove any previous CRAB submission directories
@@ -72,11 +132,14 @@ def run_crab(args):
             cfg = year
 
             # Generate cfg
-            subprocess.run(["cmsDriver.py", "--python_filename", f"{cfg}_data_cfg.py", "--eventcontent", "NANOAOD", "--customise", "Configuration/DataProcessing/Utils.addMonitoring", "--datatier", "NANOAOD", "--fileout", f"file:{cfg}_data.root", "--conditions", f"{GT}", "--step", "NANO", "--filein", f"dbs:{dataset}", "--era", f"Run2_{year[:-1]},{era}", "-n", "-1", "--no_exec", "--nThreads", "8"])
+            subprocess.run(["cmsDriver.py", "--python_filename", f"{cfg}_data_cfg.py", "--eventcontent", "NANOAOD", "--customise", "Configuration/DataProcessing/Utils.addMonitoring", "--datatier", "NANOAOD", "--fileout", f"file:{cfg}_data.root", "--conditions", f"{GT}", "--step", "NANO", "--filein", f"dbs:{dataset}", "--era", f"Run2_{year[:-1]},{era}", "--data", "-n", "-1", "--no_exec", "--nThreads", "8"])
+
+            # Generate submit file
+            path = generateSubmit(dataset, cfg)
+            new_cfgs = generateCfg(path, path.replace(".py", ""), 8)
 
             if not args.gen:
-                # Generate submit script and submit to CRAB
-                generateSubmit(dataset, cfg)
+                # Submit to CRAB
                 subprocess.run(f"crab submit -c {cfg}_data_submit.py", shell=True)
 
 

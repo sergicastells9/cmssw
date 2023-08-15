@@ -1,0 +1,32 @@
+{
+  "Data": {
+    "2018A": {
+      "files": [
+        "/EGamma/Run2018A-UL2018_MiniAODv2-v1/MINIAOD"
+      ],
+      "GT": "106X_dataRun2_v33",
+      "era": "run2_nanoAOD_106Xv1"
+    },
+    "2018B": {
+      "files": [
+        "/EGamma/Run2018B-UL2018_MiniAODv2-v1/MINIAOD"
+      ],
+      "GT": "106X_dataRun2_v33",
+      "era": "run2_nanoAOD_106Xv1"
+    },
+    "2018C": {
+      "files": [
+        "/EGamma/Run2018C-UL2018_MiniAODv2-v1/MINIAOD"
+      ],
+      "GT": "106X_dataRun2_v33",
+      "era": "run2_nanoAOD_106Xv1"
+    },
+    "2018D": {
+      "files": [
+        "/EGamma/Run2018D-UL2018_MiniAODv2-v2/MINIAOD"
+      ],
+      "GT": "106X_dataRun2_v33",
+      "era": "run2_nanoAOD_106Xv1"
+    }
+  }
+}
