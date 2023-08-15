@@ -5,7 +5,8 @@ import os
 import shutil
 import argparse
 import json
-from tdqm import tdqm
+from tqdm import tqdm
+from typing import List
 try:
     import CRABClient
     from CRABAPI.RawCommand import crabCommand
@@ -17,12 +18,14 @@ except:
 def generateCfg(
     f: str,
     cfg_path: str,
+    original_dataset: str,
     files_per_job: int = 6
 ) -> List:
 
     submit = []
     dataset = set()
     new_cfgs = []
+    new_subs = []
     cut = -1
     count = 0
 
@@ -51,10 +54,20 @@ def generateCfg(
 
     if not os.path.exists("./cfgs/"):
         os.mkdir("./cfgs/")
+    
+    if not os.path.exists("./subs/"):
+        os.mkdir("./subs/")
 
     for cfg in tqdm(range(int(len(dataset) / files_per_job) + 1)):
         new_path = f"./cfgs/{cfg_path}_{cfg}.py"
         new_cfgs.append(new_path)
+
+        new_sub = generateSubmit(
+            original_dataset,
+            new_path,
+            f"MNConversion_{new_path.replace('.py', '').replace('./cfgs/','').replace('_cfg','')}"
+        )
+        new_subs.append(new_sub)
 
         with open(new_path, "w") as fout:
             for line in submit[:cut]:
@@ -64,13 +77,20 @@ def generateCfg(
                 fout.write(f"\t{data},\n")
             
             for line in submit[cut:]:
+                if f"fileName = cms.untracked.string('file:{cfg_path.replace('_cfg','')}.root')," in line:
+                    line = line.replace(f"{cfg_path.replace('_cfg','')}.root", f"{cfg_path.replace('_cfg','')}_{cfg}.root")
                 fout.write(line)
 
-    print(f"Generated new cfg files for {f}")
-    return new_cfgs
+    print(f"Generated new cfg and submit files for {f}")
+    return new_subs
 
 
-def generateSubmit(dataset, cfg):
+def generateSubmit(
+    dataset: str,
+    cfg: str,
+    requestName: str
+) -> None:
+
     submit = f"""
 from WMCore.Configuration import Configuration
 
@@ -78,7 +98,7 @@ config = Configuration()
 
 config.section_('General')
 config.General.workArea          =  'MNConversion_crab'
-config.General.requestName	     =  'MNConversion_{cfg}_data'
+config.General.requestName	     =  '{requestName}'
 config.General.transferLogs	     =  True
 config.General.transferOutputs   =  True
 
@@ -88,7 +108,7 @@ config.JobType.numCores          = 8
 config.JobType.maxMemoryMB       = 20000
 
 # Name of the CMSSW configuration file
-config.JobType.psetName          = '{cfg}_data_cfg.py'
+config.JobType.psetName          = '{cfg}'
 config.JobType.priority          = 30
 
 config.section_('Data')
@@ -100,7 +120,7 @@ config.Data.lumiMask             = ''
 #config.Data.unitsPerJob         = 30
 config.Data.totalUnits           = -1
 config.Data.publication          = False
-config.Data.outLFNDirBase        = '/store/user/castells/outputs/MNConversion_{cfg}/'
+config.Data.outLFNDirBase        = '/store/user/castells/outputs/MNConversion/'
 
 # This string is used to construct the output dataset name
 config.section_('Site')
@@ -108,11 +128,10 @@ config.section_('Site')
 config.Site.storageSite          = 'T3_CH_CERNBOX'
     """
 
-    path = f"{cfg}_data_submit.py"
+    path = f"./subs/{cfg.replace('_cfg','').replace('./cfgs/','').replace('.py','')}_submit.py"
     with open(path, "w") as file:
         file.write(submit)
-    
-    return path
+
 
 def run_crab(args):
     # Remove any previous CRAB submission directories
@@ -132,15 +151,16 @@ def run_crab(args):
             cfg = year
 
             # Generate cfg
-            subprocess.run(["cmsDriver.py", "--python_filename", f"{cfg}_data_cfg.py", "--eventcontent", "NANOAOD", "--customise", "Configuration/DataProcessing/Utils.addMonitoring", "--datatier", "NANOAOD", "--fileout", f"file:{cfg}_data.root", "--conditions", f"{GT}", "--step", "NANO", "--filein", f"dbs:{dataset}", "--era", f"Run2_{year[:-1]},{era}", "--data", "-n", "-1", "--no_exec", "--nThreads", "8"])
+            path = f"{cfg}_data_cfg.py"
+            subprocess.run(["cmsDriver.py", "--python_filename", path, "--eventcontent", "NANOAOD", "--customise", "Configuration/DataProcessing/Utils.addMonitoring", "--datatier", "NANOAOD", "--fileout", f"file:{cfg}_data.root", "--conditions", f"{GT}", "--step", "NANO", "--filein", f"dbs:{dataset}", "--era", f"Run2_{year[:-1]},{era}", "--data", "-n", "-1", "--no_exec", "--nThreads", "8"])
 
-            # Generate submit file
-            path = generateSubmit(dataset, cfg)
-            new_cfgs = generateCfg(path, path.replace(".py", ""), 8)
+            # Generate new cfgs and submit files
+            new_subs = generateCfg(path, path.replace(".py", ""), dataset, 2)
 
             if not args.gen:
                 # Submit to CRAB
-                subprocess.run(f"crab submit -c {cfg}_data_submit.py", shell=True)
+                for sub in new_subs:
+                    subprocess.run(f"crab submit -c {sub}", shell=True)
 
 
 if __name__ == "__main__":
