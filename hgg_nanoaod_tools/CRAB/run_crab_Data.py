@@ -89,7 +89,7 @@ def generateSubmit(
     dataset: str,
     cfg: str,
     requestName: str
-) -> None:
+) -> str:
 
     submit = f"""
 from WMCore.Configuration import Configuration
@@ -115,12 +115,12 @@ config.section_('Data')
 # This string determines the primary dataset of the newly-produced outputs.
 config.Data.inputDataset         = '{dataset}'
 config.Data.inputDBS             = 'global'
-config.Data.splitting            = 'Automatic'
+config.Data.splitting            = 'FileBased'
 config.Data.lumiMask             = ''
-#config.Data.unitsPerJob         = 30
+#config.Data.unitsPerJob         = 3
 config.Data.totalUnits           = -1
 config.Data.publication          = False
-config.Data.outLFNDirBase        = '/store/user/castells/outputs/MNConversion/'
+config.Data.outLFNDirBase        = '/store/user/castells/outputs/{requestName}'
 
 # This string is used to construct the output dataset name
 config.section_('Site')
@@ -131,6 +131,8 @@ config.Site.storageSite          = 'T3_CH_CERNBOX'
     path = f"./subs/{cfg.replace('_cfg','').replace('./cfgs/','').replace('.py','')}_submit.py"
     with open(path, "w") as file:
         file.write(submit)
+    
+    return path
 
 
 def run_crab(args):
@@ -155,7 +157,11 @@ def run_crab(args):
             subprocess.run(["cmsDriver.py", "--python_filename", path, "--eventcontent", "NANOAOD", "--customise", "Configuration/DataProcessing/Utils.addMonitoring", "--datatier", "NANOAOD", "--fileout", f"file:{cfg}_data.root", "--conditions", f"{GT}", "--step", "NANO", "--filein", f"dbs:{dataset}", "--era", f"Run2_{year[:-1]},{era}", "--data", "-n", "-1", "--no_exec", "--nThreads", "8"])
 
             # Generate new cfgs and submit files
-            new_subs = generateCfg(path, path.replace(".py", ""), dataset, 2)
+            # new_subs = generateCfg(path, path.replace(".py", ""), dataset, 5)
+            new_subs = []
+            new_subs.append(
+                generateSubmit(dataset, path, path.replace(".py", ""))
+            )
 
             if not args.gen:
                 # Submit to CRAB
