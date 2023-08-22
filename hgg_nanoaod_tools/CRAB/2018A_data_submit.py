@@ -24,13 +24,13 @@ config.Data.inputDataset         = '/EGamma/Run2018A-UL2018_MiniAODv2-v1/MINIAOD
 config.Data.inputDBS             = 'global'
 config.Data.splitting            = 'Automatic'
 config.Data.lumiMask             = ''
-config.Data.unitsPerJob          = 3
+# config.Data.unitsPerJob          = 30
 config.Data.totalUnits           = -1
 config.Data.publication          = False
-config.Data.outLFNDirBase        = '/hadoop/users/scastel2/outputs/MNConversion_2018A/'
+config.Data.outLFNDirBase        = '/store/user/castells/outputs/MNConversion_2018A_final/'
 
 # This string is used to construct the output dataset name
 config.section_('Site')
 # Where the output files will be transmitted to
-config.Site.storageSite          = 'T3_CH_CERNBOX'
+config.Site.storageSite          = 'T3_US_NotreDame'
     
