@@ -115,9 +115,9 @@ config.section_('Data')
 # This string determines the primary dataset of the newly-produced outputs.
 config.Data.inputDataset         = '{dataset}'
 config.Data.inputDBS             = 'global'
-config.Data.splitting            = 'FileBased'
+config.Data.splitting            = 'Automatic'
 config.Data.lumiMask             = ''
-#config.Data.unitsPerJob         = 3
+# config.Data.unitsPerJob         = 30
 config.Data.totalUnits           = -1
 config.Data.publication          = False
 config.Data.outLFNDirBase        = '/store/user/castells/outputs/{requestName}'

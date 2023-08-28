@@ -39,7 +39,7 @@ config.Data.inputDataset         = '{dataset}'
 config.Data.inputDBS             = 'global'
 config.Data.splitting            = 'Automatic'
 config.Data.lumiMask             = ''
-#config.Data.unitsPerJob         = 30
+# config.Data.unitsPerJob         = 30
 config.Data.totalUnits           = -1
 config.Data.publication          = False
 config.Data.outLFNDirBase        = '/store/user/castells/outputs/MNConversion_{year}/'
@@ -72,19 +72,24 @@ def run_crab(args):
         elif args.background and mc == "MC_Signal":
             continue
 
-        for year in range(2018, 2019,1):
+        for year in range(2017, 2018, 1):
         # for year in range(2016,2019,1):
             for dataset in datasets[f"{mc}"][f"{year}"]["files"]:
                 GT = datasets[f"{mc}"][f"{year}"]["GT"]
                 era = datasets[f"{mc}"][f"{year}"]["era"]
                 cfg = dataset.split("/")[1]
 
+                if "35" not in cfg:
+                    continue
+
                 # Generate cfg
                 subprocess.run(["cmsDriver.py", "--python_filename", f"{cfg}_{year}_cfg.py", "--eventcontent", "NANOAODSIM", "--customise", "Configuration/DataProcessing/Utils.addMonitoring", "--datatier", "NANOAODSIM", "--fileout", f"file:{cfg}_{year}.root", "--conditions", f"{GT}", "--step", "NANO", "--filein", f"dbs:{dataset}", "--era", f"Run2_{year},{era}", "--mc", "-n", "-1", "--no_exec", "--nThreads", "8"])
                 
+                # Generate submit script
+                generateSubmit(dataset, cfg, year)
+
                 if not args.gen:
-                    # Generate submit script and submit to CRAB
-                    generateSubmit(dataset, cfg, year)
+                    # Submit to CRAB
                     subprocess.run(f"crab submit -c {cfg}_{year}_submit.py", shell=True)
 
 if __name__ == "__main__":
