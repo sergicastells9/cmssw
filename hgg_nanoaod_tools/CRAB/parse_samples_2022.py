@@ -22,7 +22,7 @@ if __name__ == "__main__":
     with open(args.inputFile, "r") as file:
         for line in file:
             for era_letter, era_list in zip(["A","B","C","D","E","F","G"], [A,B,C,D,E,F,G]):
-                if era_letter in line:
+                if f"Run2022{era_letter}" in line:
                     era_list.append(line.strip())
 
     for era_letter, era_list in zip(["A","B","C","D","E","F","G"], [A,B,C,D,E,F,G]):
