@@ -26,7 +26,7 @@ if __name__ == "__main__":
                 universal_newlines = True).stdout.split("\n")[:-1]
         )
     
-    with open("data_2018.txt", "w") as f:
+    with open("data_2022.txt", "w") as f:
         for fname in dbs_out:
             f.write(fname)
             f.write("\n")

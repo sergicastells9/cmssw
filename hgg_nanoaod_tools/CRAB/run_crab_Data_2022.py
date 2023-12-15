@@ -142,19 +142,19 @@ def run_crab(args):
         print("Removed old CRAB submission directories.")
 
     # Load in datasets from json
-    with open("Data_Datasets.json") as file:
+    with open("2022_Data_Datasets.json") as file:
         datasets = json.load(file)
 
     # Generate cfg with cmsDriver for each dataset and submit to crab
-    for year in ["2018A", "2018B", "2018C", "2018D"]:
-        for dataset in datasets["Data"][f"{year}"]["files"]:
-            GT = datasets["Data"][f"{year}"]["GT"]
-            era = datasets["Data"][f"{year}"]["era"]
-            cfg = year
+    for era in ["A","B","C","D","E","F","G"]:
+        for dataset in datasets["Data"][f"{era}"]["files"]:
+            GT = datasets["Data"][f"2022{era}"]["GT"]
+            era = datasets["Data"][f"2022{era}"]["era"]
+            cfg = f"2022{era}"
 
             # Generate cfg
             path = f"{cfg}_data_cfg.py"
-            subprocess.run(["cmsDriver.py", "--python_filename", path, "--eventcontent", "NANOAOD", "--customise", "Configuration/DataProcessing/Utils.addMonitoring", "--datatier", "NANOAOD", "--fileout", f"file:{cfg}_data.root", "--conditions", f"{GT}", "--step", "NANO", "--filein", f"dbs:{dataset}", "--era", f"Run2_{year[:-1]},{era}", "--data", "-n", "-1", "--no_exec", "--nThreads", "8"])
+            subprocess.run(["cmsDriver.py", "--python_filename", path, "--eventcontent", "NANOAOD", "--customise", "Configuration/DataProcessing/Utils.addMonitoring", "--datatier", "NANOAOD", "--fileout", f"file:{cfg}_data.root", "--conditions", f"{GT}", "--step", "NANO", "--filein", f"dbs:{dataset}", "--era", f"Run3_2022,{era}", "--data", "-n", "-1", "--no_exec", "--nThreads", "8"])
 
             # Generate new cfgs and submit files
             # new_subs = generateCfg(path, path.replace(".py", ""), dataset, 5)
