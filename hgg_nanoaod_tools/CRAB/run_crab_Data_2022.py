@@ -104,7 +104,7 @@ config.General.transferOutputs   =  True
 
 config.section_('JobType')
 config.JobType.pluginName        = 'Analysis'
-config.JobType.numCores          = 8
+config.JobType.numCores          = 1
 config.JobType.maxMemoryMB       = 20000
 
 # Name of the CMSSW configuration file
@@ -154,7 +154,7 @@ def run_crab(args):
 
             # Generate cfg
             path = f"{cfg}_data_cfg.py"
-            subprocess.run(["cmsDriver.py", "--python_filename", path, "--eventcontent", "NANOAOD", "--customise", "Configuration/DataProcessing/Utils.addMonitoring", "--datatier", "NANOAOD", "--fileout", f"file:{cfg}_data.root", "--conditions", f"{GT}", "--step", "NANO", "--filein", f"dbs:{dataset}", "--era", f"Run3_2022,{era}", "--data", "-n", "-1", "--no_exec", "--nThreads", "8"])
+            subprocess.run(["cmsDriver.py", "--python_filename", path, "--eventcontent", "NANOAOD", "--customise", "Configuration/DataProcessing/Utils.addMonitoring", "--datatier", "NANOAOD", "--fileout", f"file:{cfg}_data.root", "--conditions", f"{GT}", "--step", "NANO", "--filein", f"dbs:{dataset}", "--era", f"Run3_2022,{era}", "--data", "-n", "-1", "--no_exec", "--nThreads", "1"])
 
             # Generate new cfgs and submit files
             # new_subs = generateCfg(path, path.replace(".py", ""), dataset, 5)

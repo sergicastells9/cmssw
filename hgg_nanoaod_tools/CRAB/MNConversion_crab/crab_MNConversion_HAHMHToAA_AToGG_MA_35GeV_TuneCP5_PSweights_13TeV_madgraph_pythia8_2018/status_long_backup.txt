@@ -1,0 +1,43 @@
+Rucio client intialized for account castells
+CRAB project directory:		/eos/home-c/castells/MNConversion/CMSSW_10_6_26/src/hgg_nanoaod_tools/CRAB/MNConversion_crab/crab_MNConversion_HAHMHToAA_AToGG_MA_35GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018
+Task name:			240115_130834:castells_crab_MNConversion_HAHMHToAA_AToGG_MA_35GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018
+Grid scheduler - Task Worker:	crab3@vocms0121.cern.ch - crab-prod-tw01
+Status on the CRAB server:	SUBMITTED
+Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/240115_130834%3Acastells_crab_MNConversion_HAHMHToAA_AToGG_MA_35GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018
+Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=castells&var-task=240115_130834%3Acastells_crab_MNConversion_HAHMHToAA_AToGG_MA_35GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018&from=1705320514000&to=now
+Status on the scheduler:	COMPLETED
+
+The job splitting of this task is 'Automatic', please refer to this FAQ for a description of the jobs status summary:
+https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3FAQ#What_is_the_Automatic_splitting
+More details of Automatic Splitting process for this task (including possible failures) are in the Dagman Log files in:
+https://cmsweb.cern.ch:8443/scheddmon/0121/castells/240115_130834:castells_crab_MNConversion_HAHMHToAA_AToGG_MA_35GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018/AutomaticSplitting/
+
+Probe jobs status:              no output    		100.0% (5/5)
+
+Main jobs status:               finished     		100.0% (5/5)
+
+No publication information (publication has been disabled in the CRAB configuration file)
+
+Extended Job Status Table:
+
+ Job State        Most Recent Site        Runtime   Mem (MB)      CPU %    Retries   Restarts      Waste       Exit Code
+ 0-1 no output    T2_ES_CIEMAT            0:19:23       2004         90          0          0    0:02:32               0
+ 0-2 no output    T2_ES_CIEMAT            0:16:47       2016         88          0          0    0:02:32               0
+ 0-3 no output    T2_ES_CIEMAT            0:18:07       2002         89          0          0    0:02:30               0
+ 0-4 no output    T2_ES_CIEMAT            0:17:52       1980         88          0          0    0:02:30               0
+ 0-5 no output    T2_ES_CIEMAT            0:18:54       1994         90          0          0    0:02:32               0
+   1 finished     T2_ES_CIEMAT            5:38:44       1872         97          0          0    0:03:24               0
+   2 finished     T2_ES_CIEMAT            4:58:09       1872         97          0          0    0:03:25               0
+   3 finished     T2_ES_CIEMAT            5:16:02       1900         97          0          0    0:03:23               0
+   4 finished     T2_ES_CIEMAT            4:38:53       1883         97          0          0    0:03:26               0
+   5 finished     T2_ES_CIEMAT            3:39:10       1872         97          0          0    0:03:23               0
+
+Warning: the max jobs runtime is less than 30% of the task requested value (1250 min), please consider to request a lower value for failed jobs (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+
+Summary of run jobs:
+ * Memory: 1994MB min, 1900MB max, 1880MB ave
+ * Runtime: 0:16:47 min, 5:38:44 max, 4:50:11 ave
+ * CPU eff: 97% min, 97% max, 97% ave
+ * Waste: 0:17:05 (1% of total)
+
+Log file is /eos/home-c/castells/MNConversion/CMSSW_10_6_26/src/hgg_nanoaod_tools/CRAB/MNConversion_crab/crab_MNConversion_HAHMHToAA_AToGG_MA_35GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018/crab.log

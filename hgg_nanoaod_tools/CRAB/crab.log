@@ -1,0 +1,302 @@
+DEBUG 2024-01-10 09:04:22.169 UTC: 	 CRAB Client version: v3.231101
+DEBUG 2024-01-10 09:04:22.169 UTC: 	 Running on: Linux lxplus704.cern.ch 3.10.0-1160.105.1.el7.x86_64 #1 SMP Thu Dec 7 15:39:45 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2024-01-10 09:04:22.169 UTC: 	 Executing command: 'kill'
+DEBUG 2024-01-10 09:04:22.170 UTC: 	 Found CRAB cache file /afs/cern.ch/user/c/castells/.crab3
+ERROR 2024-01-10 09:04:22.173 UTC: 	 Cannot find .requestcache file in CRAB project directory /eos/home-c/castells/MNConversion/CMSSW_10_6_26/src/hgg_nanoaod_tools/CRAB/MNConversion_crab
+ERROR 2024-01-10 09:04:22.173 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.231101.00/bin/crab.py", line 152, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.231101.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.231101.00/lib/CRABClient/Commands/SubCommand.py", line 278, in __init__
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.231101.00/lib/CRABClient/Commands/SubCommand.py", line 667, in validateOptions
+    self.loadLocalCache()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.231101.00/lib/CRABClient/Commands/SubCommand.py", line 520, in loadLocalCache
+    raise ex
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.231101.00/lib/CRABClient/Commands/SubCommand.py", line 514, in loadLocalCache
+    self.cachedinfo, self.logfile = loadCache(self.requestarea, self.logger)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.231101.00/lib/CRABClient/ClientUtilities.py", line 443, in loadCache
+    raise CachefileNotFoundException(msg)
+CRABClient.ClientExceptions.CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /eos/home-c/castells/MNConversion/CMSSW_10_6_26/src/hgg_nanoaod_tools/CRAB/MNConversion_crab
+INFO 2024-01-10 09:04:22.179 UTC: 	 Log file is /eos/home-c/castells/MNConversion/CMSSW_10_6_26/src/hgg_nanoaod_tools/CRAB/crab.log
+DEBUG 2024-01-11 15:05:16.430 UTC: 	 CRAB Client version: v3.231101
+DEBUG 2024-01-11 15:05:16.431 UTC: 	 Running on: Linux lxplus719.cern.ch 3.10.0-1160.102.1.el7.x86_64 #1 SMP Tue Oct 17 15:42:21 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2024-01-11 15:05:16.431 UTC: 	 Executing command: 'getlog'
+DEBUG 2024-01-11 15:05:16.435 UTC: 	 Found CRAB cache file /afs/cern.ch/user/c/castells/.crab3
+DEBUG 2024-01-12 13:12:04.233 UTC: 	 CRAB Client version: v3.231101
+DEBUG 2024-01-12 13:12:04.234 UTC: 	 Running on: Linux lxplus772.cern.ch 3.10.0-1160.102.1.el7.x86_64 #1 SMP Tue Oct 17 15:42:21 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2024-01-12 13:12:04.234 UTC: 	 Executing command: 'createmyproxy'
+DEBUG 2024-01-12 13:12:04.285 UTC: 	 Found CRAB cache file /afs/cern.ch/user/c/castells/.crab3
+DEBUG 2024-01-12 13:12:04.338 UTC: 	 Checking credentials
+DEBUG 2024-01-12 13:12:04.338 UTC: 	 Found proxy file /tmp/x509up_u125472
+DEBUG 2024-01-12 13:12:04.338 UTC: 	 Making sure it has proper VOMS extension
+DEBUG 2024-01-12 13:12:04.338 UTC: 	 Executing command :
+ voms-proxy-info --vo --file /tmp/x509up_u125472
+DEBUG 2024-01-12 13:12:07.386 UTC: 	 output : cms
+
+ error: 
+ retcode : 0
+DEBUG 2024-01-12 13:12:07.386 UTC: 	 Getting proxy life time left
+DEBUG 2024-01-12 13:12:07.386 UTC: 	 Executing command :
+ voms-proxy-info --actimeleft --timeleft --file /tmp/x509up_u125472
+DEBUG 2024-01-12 13:12:12.976 UTC: 	 output : 36570
+36570
+
+ error: 
+ retcode : 0
+DEBUG 2024-01-12 13:12:12.976 UTC: 	 Proxy valid for 10:09:30 hours
+DEBUG 2024-01-12 13:12:12.976 UTC: 	 Encoded data for curl request: subresource=delegatedn
+DEBUG 2024-01-12 13:12:15.866 UTC: 	 Registering user credentials on myproxy for /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(01|02|03).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch|/DC=ch/DC=cern/OU=computers/CN=dciangot-tw.cern.ch
+DEBUG 2024-01-12 13:12:15.866 UTC: 	 Executing command :
+ voms-proxy-info --identity --file /tmp/x509up_u125472
+DEBUG 2024-01-12 13:12:18.776 UTC: 	 output : /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=castells/CN=840278/CN=Sergi Castells
+
+ error: 
+ retcode : 0
+DEBUG 2024-01-12 13:12:18.776 UTC: 	 Getting myproxy life time left for 85fedee37a5a447f0da843835c459265aae0d06e
+DEBUG 2024-01-12 13:12:18.776 UTC: 	 Executing command :
+ myproxy-info -s myproxy.cern.ch -l 85fedee37a5a447f0da843835c459265aae0d06e
+DEBUG 2024-01-12 13:12:19.259 UTC: 	 output : username: 85fedee37a5a447f0da843835c459265aae0d06e
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=castells/CN=840278/CN=Sergi Castells
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(01|02|03).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch|/DC=ch/DC=cern/OU=computers/CN=dciangot-tw.cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(01|02|03).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch|/DC=ch/DC=cern/OU=computers/CN=dciangot-tw.cern.ch
+  timeleft: 625:24:43  (26.1 days)
+
+ error: 
+ retcode : 0
+DEBUG 2024-01-12 13:12:19.259 UTC: 	 Myproxy is valid: 2251440
+DEBUG 2024-01-12 13:12:19.259 UTC: 	 Result of myproxy credential check:
+  Credential exists on myproxy: username: 85fedee37a5a447f0da843835c459265aae0d06e  - validity: 26 days, 1:24:00
+DEBUG 2024-01-12 13:12:19.259 UTC: 	 Command use: createmyproxy
+DEBUG 2024-01-12 13:12:19.259 UTC: 	 Options use: []
+DEBUG 2024-01-12 13:12:19.259 UTC: 	 Encoded data for curl request: subresource=version
+DEBUG 2024-01-12 13:12:28.896 UTC: 	 CRABClient version: v3.231101
+DEBUG 2024-01-12 13:12:28.896 UTC: 	 Instance is prod
+DEBUG 2024-01-12 13:12:28.896 UTC: 	 Server base url is cmsweb.cern.ch
+DEBUG 2024-01-12 13:12:28.896 UTC: 	 Command api workflow
+INFO 2024-01-12 13:12:28.896 UTC: 	 Checking credentials
+DEBUG 2024-01-12 13:12:28.896 UTC: 	 Checking credentials
+DEBUG 2024-01-12 13:12:28.896 UTC: 	 Found proxy file /tmp/x509up_u125472
+DEBUG 2024-01-12 13:12:28.896 UTC: 	 Making sure it has proper VOMS extension
+DEBUG 2024-01-12 13:12:28.896 UTC: 	 Executing command :
+ voms-proxy-info --vo --file /tmp/x509up_u125472
+DEBUG 2024-01-12 13:12:32.616 UTC: 	 output : cms
+
+ error: 
+ retcode : 0
+DEBUG 2024-01-12 13:12:32.616 UTC: 	 Getting proxy life time left
+DEBUG 2024-01-12 13:12:32.616 UTC: 	 Executing command :
+ voms-proxy-info --actimeleft --timeleft --file /tmp/x509up_u125472
+DEBUG 2024-01-12 13:12:38.056 UTC: 	 output : 36545
+36545
+
+ error: 
+ retcode : 0
+DEBUG 2024-01-12 13:12:38.056 UTC: 	 Proxy valid for 10:09:05 hours
+DEBUG 2024-01-12 13:12:38.056 UTC: 	 Encoded data for curl request: subresource=delegatedn
+INFO 2024-01-12 13:12:40.935 UTC: 	 Registering user credentials in myproxy
+DEBUG 2024-01-12 13:12:40.936 UTC: 	 Executing command :
+ voms-proxy-info --identity --file /tmp/x509up_u125472
+DEBUG 2024-01-12 13:12:47.656 UTC: 	 output : /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=castells/CN=840278/CN=Sergi Castells
+
+ error: 
+ retcode : 0
+DEBUG 2024-01-12 13:12:47.657 UTC: 	 Getting myproxy life time left for 85fedee37a5a447f0da843835c459265aae0d06e
+DEBUG 2024-01-12 13:12:47.657 UTC: 	 Executing command :
+ myproxy-info -s myproxy.cern.ch -l 85fedee37a5a447f0da843835c459265aae0d06e
+DEBUG 2024-01-12 13:12:47.922 UTC: 	 output : username: 85fedee37a5a447f0da843835c459265aae0d06e
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=castells/CN=840278/CN=Sergi Castells
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(01|02|03).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch|/DC=ch/DC=cern/OU=computers/CN=dciangot-tw.cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(01|02|03).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch|/DC=ch/DC=cern/OU=computers/CN=dciangot-tw.cern.ch
+  timeleft: 625:24:15  (26.1 days)
+
+ error: 
+ retcode : 0
+DEBUG 2024-01-12 13:12:47.922 UTC: 	 Myproxy is valid: 2251440
+DEBUG 2024-01-12 13:12:47.922 UTC: 	 Executing command :
+ openssl x509 -noout -dates -in ~/.globus/usercert.pem
+DEBUG 2024-01-12 13:12:48.368 UTC: 	 output : notBefore=Aug 10 07:16:30 2023 GMT
+notAfter=Sep 13 07:16:30 2024 GMT
+
+ error: 
+ retcode : 0
+DEBUG 2024-01-12 13:12:48.375 UTC: 	 Delegating a myproxy for 720:00 hours
+DEBUG 2024-01-12 13:12:48.375 UTC: 	 Executing command :
+ export GT_PROXY_MODE=rfc ; myproxy-init -d -n -s myproxy.cern.ch -C ~/.globus/usercert.pem -y ~/.globus/userkey.pem -x -R '/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(01|02|03).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch|/DC=ch/DC=cern/OU=computers/CN=dciangot-tw.cern.ch' -x -Z '/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(01|02|03).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch|/DC=ch/DC=cern/OU=computers/CN=dciangot-tw.cern.ch' -l 85fedee37a5a447f0da843835c459265aae0d06e -t 168 -c 720:00
+DEBUG 2024-01-12 13:13:04.778 UTC: 	 output : Your identity: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=castells/CN=840278/CN=Sergi Castells
+Creating proxy .............................................................................................................. Done
+Proxy Verify OK
+Your proxy is valid until: Sun Feb 11 14:13:04 2024
+A proxy valid for 720 hours (30.0 days) for user 85fedee37a5a447f0da843835c459265aae0d06e now exists on myproxy.cern.ch.
+
+ error: 
+ retcode : 0
+DEBUG 2024-01-12 13:13:04.778 UTC: 	 Executing command :
+ myproxy-info -s myproxy.cern.ch -l 85fedee37a5a447f0da843835c459265aae0d06e
+DEBUG 2024-01-12 13:13:05.042 UTC: 	 output : username: 85fedee37a5a447f0da843835c459265aae0d06e
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=castells/CN=840278/CN=Sergi Castells
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(01|02|03).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch|/DC=ch/DC=cern/OU=computers/CN=dciangot-tw.cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(01|02|03).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch|/DC=ch/DC=cern/OU=computers/CN=dciangot-tw.cern.ch
+  timeleft: 719:59:59  (30.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2024-01-12 13:13:05.042 UTC: 	 My-proxy delegated.
+INFO 2024-01-12 13:13:05.042 UTC: 	 Credential exists on myproxy: username: 85fedee37a5a447f0da843835c459265aae0d06e  - validity: 29 days, 23:59:00
+INFO 2024-01-12 13:13:05.050 UTC: 	 Log file is /eos/home-c/castells/MNConversion/CMSSW_10_6_26/src/hgg_nanoaod_tools/CRAB/crab.log
+DEBUG 2024-01-12 13:23:09.398 UTC: 	 CRAB Client version: v3.231101
+DEBUG 2024-01-12 13:23:09.398 UTC: 	 Running on: Linux lxplus772.cern.ch 3.10.0-1160.102.1.el7.x86_64 #1 SMP Tue Oct 17 15:42:21 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2024-01-12 13:23:09.398 UTC: 	 Executing command: 'submit'
+DEBUG 2024-01-12 13:23:09.398 UTC: 	 Found CRAB cache file /afs/cern.ch/user/c/castells/.crab3
+ERROR 2024-01-12 13:23:09.400 UTC: 	 CRAB configuration file crabConfig.py not found.
+ERROR 2024-01-12 13:23:09.400 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.231101.00/bin/crab.py", line 152, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.231101.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.231101.00/lib/CRABClient/Commands/submit.py", line 36, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.231101.00/lib/CRABClient/Commands/SubCommand.py", line 319, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.231101.00/lib/CRABClient/Commands/SubCommand.py", line 53, in loadConfig
+    raise ConfigurationException("CRAB configuration file %s not found." % (configname))
+CRABClient.ClientExceptions.ConfigurationException: CRAB configuration file crabConfig.py not found.
+INFO 2024-01-12 13:23:09.402 UTC: 	 Log file is /eos/home-c/castells/MNConversion/CMSSW_10_6_26/src/hgg_nanoaod_tools/CRAB/crab.log
+DEBUG 2024-01-12 13:31:14.616 UTC: 	 CRAB Client version: v3.231101
+DEBUG 2024-01-12 13:31:14.616 UTC: 	 Running on: Linux lxplus772.cern.ch 3.10.0-1160.102.1.el7.x86_64 #1 SMP Tue Oct 17 15:42:21 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2024-01-12 13:31:14.616 UTC: 	 Executing command: 'submit'
+DEBUG 2024-01-12 13:31:14.616 UTC: 	 Found CRAB cache file /afs/cern.ch/user/c/castells/.crab3
+ERROR 2024-01-12 13:31:14.617 UTC: 	 CRAB configuration file crabConfig.py not found.
+ERROR 2024-01-12 13:31:14.617 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.231101.00/bin/crab.py", line 152, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.231101.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.231101.00/lib/CRABClient/Commands/submit.py", line 36, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.231101.00/lib/CRABClient/Commands/SubCommand.py", line 319, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.231101.00/lib/CRABClient/Commands/SubCommand.py", line 53, in loadConfig
+    raise ConfigurationException("CRAB configuration file %s not found." % (configname))
+CRABClient.ClientExceptions.ConfigurationException: CRAB configuration file crabConfig.py not found.
+INFO 2024-01-12 13:31:14.620 UTC: 	 Log file is /eos/home-c/castells/MNConversion/CMSSW_10_6_26/src/hgg_nanoaod_tools/CRAB/crab.log
+DEBUG 2024-01-12 14:16:49.900 UTC: 	 CRAB Client version: v3.231101
+DEBUG 2024-01-12 14:16:49.900 UTC: 	 Running on: Linux lxplus772.cern.ch 3.10.0-1160.102.1.el7.x86_64 #1 SMP Tue Oct 17 15:42:21 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2024-01-12 14:16:49.900 UTC: 	 Executing command: 'submit'
+DEBUG 2024-01-12 14:16:49.901 UTC: 	 Found CRAB cache file /afs/cern.ch/user/c/castells/.crab3
+INFO 2024-01-12 14:16:49.901 UTC: 	 Will use CRAB configuration file HAHMHToAA_AToGG_MA_15GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018_submit.py
+DEBUG 2024-01-12 14:16:49.902 UTC: 	 Loading CRAB configuration file.
+DEBUG 2024-01-12 14:16:49.996 UTC: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2024-01-12 14:16:50.000 UTC: 	 Working area '/eos/home-c/castells/MNConversion/CMSSW_10_6_26/src/hgg_nanoaod_tools/CRAB/MNConversion_crab/crab_MNConversion_HAHMHToAA_AToGG_MA_15GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018' already exists 
+Please change the requestName in the config file
+ERROR 2024-01-12 14:16:50.000 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.231101.00/bin/crab.py", line 152, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.231101.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.231101.00/lib/CRABClient/Commands/submit.py", line 36, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.231101.00/lib/CRABClient/Commands/SubCommand.py", line 323, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.231101.00/lib/CRABClient/ClientUtilities.py", line 390, in createWorkArea
+    raise ConfigException("Working area '%s' already exists \nPlease change the requestName in the config file" % fullpath)
+CRABClient.ClientExceptions.ConfigException: Working area '/eos/home-c/castells/MNConversion/CMSSW_10_6_26/src/hgg_nanoaod_tools/CRAB/MNConversion_crab/crab_MNConversion_HAHMHToAA_AToGG_MA_15GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018' already exists 
+Please change the requestName in the config file
+INFO 2024-01-12 14:16:50.004 UTC: 	 Log file is /eos/home-c/castells/MNConversion/CMSSW_10_6_26/src/hgg_nanoaod_tools/CRAB/crab.log
+DEBUG 2024-01-12 14:36:04.745 UTC: 	 CRAB Client version: v3.231101
+DEBUG 2024-01-12 14:36:04.745 UTC: 	 Running on: Linux lxplus772.cern.ch 3.10.0-1160.102.1.el7.x86_64 #1 SMP Tue Oct 17 15:42:21 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2024-01-12 14:36:04.745 UTC: 	 Executing command: 'submit'
+DEBUG 2024-01-12 14:36:04.745 UTC: 	 Found CRAB cache file /afs/cern.ch/user/c/castells/.crab3
+INFO 2024-01-12 14:36:04.746 UTC: 	 Will use CRAB configuration file submit_15GeV_test.py
+DEBUG 2024-01-12 14:36:04.746 UTC: 	 Loading CRAB configuration file.
+ERROR 2024-01-12 14:36:04.753 UTC: 	 The 'dryrun' option is not compatible with the 'Automatic' splitting mode (default).
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2024-01-12 14:36:04.753 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.231101.00/bin/crab.py", line 152, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.231101.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.231101.00/lib/CRABClient/Commands/submit.py", line 36, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.231101.00/lib/CRABClient/Commands/SubCommand.py", line 319, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.231101.00/lib/CRABClient/Commands/SubCommand.py", line 96, in loadConfig
+    raise ConfigurationException(configmsg)
+CRABClient.ClientExceptions.ConfigurationException: The 'dryrun' option is not compatible with the 'Automatic' splitting mode (default).
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+INFO 2024-01-12 14:36:04.756 UTC: 	 Log file is /eos/home-c/castells/MNConversion/CMSSW_10_6_26/src/hgg_nanoaod_tools/CRAB/crab.log
+DEBUG 2024-01-12 14:36:34.201 UTC: 	 CRAB Client version: v3.231101
+DEBUG 2024-01-12 14:36:34.201 UTC: 	 Running on: Linux lxplus772.cern.ch 3.10.0-1160.102.1.el7.x86_64 #1 SMP Tue Oct 17 15:42:21 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2024-01-12 14:36:34.201 UTC: 	 Executing command: 'submit'
+DEBUG 2024-01-12 14:36:34.201 UTC: 	 Found CRAB cache file /afs/cern.ch/user/c/castells/.crab3
+INFO 2024-01-12 14:36:34.208 UTC: 	 Will use CRAB configuration file submit_15GeV_test.py
+DEBUG 2024-01-12 14:36:34.208 UTC: 	 Loading CRAB configuration file.
+ERROR 2024-01-12 14:36:34.233 UTC: 	 Invalid CRAB configuration: Parameter Data.unitsPerJob is mandatory for 'FileBased' splitting mode.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2024-01-12 14:36:34.233 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.231101.00/bin/crab.py", line 152, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.231101.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.231101.00/lib/CRABClient/Commands/submit.py", line 36, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.231101.00/lib/CRABClient/Commands/SubCommand.py", line 319, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.231101.00/lib/CRABClient/Commands/SubCommand.py", line 96, in loadConfig
+    raise ConfigurationException(configmsg)
+CRABClient.ClientExceptions.ConfigurationException: Invalid CRAB configuration: Parameter Data.unitsPerJob is mandatory for 'FileBased' splitting mode.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+INFO 2024-01-12 14:36:34.237 UTC: 	 Log file is /eos/home-c/castells/MNConversion/CMSSW_10_6_26/src/hgg_nanoaod_tools/CRAB/crab.log
+DEBUG 2024-01-15 09:37:38.712 UTC: 	 CRAB Client version: v3.231010
+DEBUG 2024-01-15 09:37:38.712 UTC: 	 Running on: Linux lxplus717.cern.ch 3.10.0-1160.102.1.el7.x86_64 #1 SMP Tue Oct 17 15:42:21 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2024-01-15 09:37:38.712 UTC: 	 Executing command: 'submit'
+DEBUG 2024-01-15 09:37:38.712 UTC: 	 Found CRAB cache file /afs/cern.ch/user/c/castells/.crab3
+DEBUG 2024-01-15 09:42:37.006 UTC: 	 CRAB Client version: v3.231010
+DEBUG 2024-01-15 09:42:37.006 UTC: 	 Running on: Linux lxplus717.cern.ch 3.10.0-1160.102.1.el7.x86_64 #1 SMP Tue Oct 17 15:42:21 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2024-01-15 09:42:37.006 UTC: 	 Executing command: 'submit'
+DEBUG 2024-01-15 09:42:37.006 UTC: 	 Found CRAB cache file /afs/cern.ch/user/c/castells/.crab3
+INFO 2024-01-15 09:42:37.007 UTC: 	 Will use CRAB configuration file HAHMHToAA_AToGG_MA_15GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018_submit.py
+DEBUG 2024-01-15 09:42:37.007 UTC: 	 Loading CRAB configuration file.
+ERROR 2024-01-15 09:42:37.025 UTC: 	 The 'dryrun' option is not compatible with the 'Automatic' splitting mode (default).
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2024-01-15 09:42:37.025 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-pre/v3.231010.00/bin/crab.py", line 159, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-pre/v3.231010.00/bin/crab.py", line 144, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/share/cms/crab-pre/v3.231010.00/lib/CRABClient/Commands/submit.py", line 36, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-pre/v3.231010.00/lib/CRABClient/Commands/SubCommand.py", line 318, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-pre/v3.231010.00/lib/CRABClient/Commands/SubCommand.py", line 95, in loadConfig
+    raise ConfigurationException(configmsg)
+ConfigurationException: The 'dryrun' option is not compatible with the 'Automatic' splitting mode (default).
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+INFO 2024-01-15 09:42:37.028 UTC: 	 Log file is /eos/home-c/castells/MNConversion/CMSSW_10_6_26/src/hgg_nanoaod_tools/CRAB/crab.log
+DEBUG 2024-01-15 09:46:31.000 UTC: 	 CRAB Client version: v3.231101
+DEBUG 2024-01-15 09:46:31.000 UTC: 	 Running on: Linux lxplus717.cern.ch 3.10.0-1160.102.1.el7.x86_64 #1 SMP Tue Oct 17 15:42:21 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2024-01-15 09:46:31.000 UTC: 	 Executing command: 'status'
+DEBUG 2024-01-15 09:46:31.000 UTC: 	 Found CRAB cache file /afs/cern.ch/user/c/castells/.crab3
+ERROR 2024-01-15 09:46:31.001 UTC: 	 Error: MNConversion_crab/crab_MNConversion_HAHMHToAA_AToGG_MA_15GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018/ is not a valid CRAB project directory.
+ERROR 2024-01-15 09:46:31.001 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.231101.00/bin/crab.py", line 152, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.231101.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.231101.00/lib/CRABClient/Commands/status.py", line 49, in __init__
+    SubCommand.__init__(self, logger, cmdargs)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.231101.00/lib/CRABClient/Commands/SubCommand.py", line 278, in __init__
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.231101.00/lib/CRABClient/Commands/SubCommand.py", line 663, in validateOptions
+    raise ConfigurationException(msg)
+CRABClient.ClientExceptions.ConfigurationException: [91mError[0m: MNConversion_crab/crab_MNConversion_HAHMHToAA_AToGG_MA_15GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018/ is not a valid CRAB project directory.
+INFO 2024-01-15 09:46:31.007 UTC: 	 Log file is /eos/home-c/castells/MNConversion/CMSSW_10_6_26/src/hgg_nanoaod_tools/CRAB/crab.log

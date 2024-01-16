@@ -1,0 +1,45 @@
+Rucio client intialized for account castells
+CRAB project directory:		/eos/home-c/castells/MNConversion/CMSSW_10_6_26/src/hgg_nanoaod_tools/CRAB/MNConversion_crab/crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018
+Task name:			240115_130814:castells_crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018
+Grid scheduler - Task Worker:	crab3@vocms0195.cern.ch - crab-prod-tw01
+Status on the CRAB server:	SUBMITTED
+Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/240115_130814%3Acastells_crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018
+Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=castells&var-task=240115_130814%3Acastells_crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018&from=1705320494000&to=now
+Status on the scheduler:	COMPLETED
+
+The job splitting of this task is 'Automatic', please refer to this FAQ for a description of the jobs status summary:
+https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3FAQ#What_is_the_Automatic_splitting
+More details of Automatic Splitting process for this task (including possible failures) are in the Dagman Log files in:
+https://cmsweb.cern.ch:8443/scheddmon/0195/castells/240115_130814:castells_crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018/AutomaticSplitting/
+
+Probe jobs status:              no output    		100.0% (5/5)
+
+Main jobs status:               finished     		100.0% (7/7)
+
+No publication information (publication has been disabled in the CRAB configuration file)
+
+Extended Job Status Table:
+
+ Job State        Most Recent Site        Runtime   Mem (MB)      CPU %    Retries   Restarts      Waste       Exit Code
+ 0-1 no output    T2_CH_CERN              0:19:09       2010         92          0          0    0:00:00               0
+ 0-2 no output    T2_CH_CERN              0:19:57       2318         91          0          0    0:00:00               0
+ 0-3 no output    T2_CH_CERN              0:19:49       1427         87          0          0    0:00:00               0
+ 0-4 no output    T2_CH_CERN              0:21:22       2312         82          0          0    0:00:00               0
+ 0-5 no output    T2_CH_CERN              0:18:04       2223         90          0          0    0:00:00               0
+   1 finished     T2_CH_CERN              5:40:12       2501         95          0          0    0:05:01               0
+   2 finished     T2_CH_CERN              3:17:31       2409         94          0          0    0:05:03               0
+   3 finished     T2_CH_CERN              3:51:28       2512         92          0          0    0:05:05               0
+   4 finished     T2_CH_CERN              3:57:12       2465         92          0          0    0:05:03               0
+   5 finished     T2_CH_CERN              4:31:49       2323         81          0          0    0:05:01               0
+   6 finished     T2_CH_CERN              3:30:26       2376         97          0          0    0:05:03               0
+   7 finished     T2_CH_CERN              0:38:51       2221         96          0          0    0:05:01               0
+
+Warning: the max jobs runtime is less than 30% of the task requested value (1250 min), please consider to request a lower value for failed jobs (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+
+Summary of run jobs:
+ * Memory: 2223MB min, 2512MB max, 2402MB ave
+ * Runtime: 0:18:04 min, 5:40:12 max, 3:38:12 ave
+ * CPU eff: 81% min, 97% max, 92% ave
+ * Waste: 0:35:23 (2% of total)
+
+Log file is /eos/home-c/castells/MNConversion/CMSSW_10_6_26/src/hgg_nanoaod_tools/CRAB/MNConversion_crab/crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018/crab.log

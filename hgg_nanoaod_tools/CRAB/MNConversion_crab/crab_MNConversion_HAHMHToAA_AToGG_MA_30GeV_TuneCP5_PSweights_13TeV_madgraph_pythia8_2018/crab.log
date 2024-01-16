@@ -1,0 +1,460 @@
+Updating process to run DeepBoostedJet on datasets before 103X
+Updating process to run ParticleNet before it's included in MiniAOD
+Updating process to run DeepDoubleX on datasets before 104X
+Updating process to run DeepDoubleXv2 on datasets before 11X
+Will recalculate the following discriminators on AK8 jets: pfDeepBoostedJetTags:probTbcq, pfDeepBoostedJetTags:probTbqq, pfDeepBoostedJetTags:probTbc, pfDeepBoostedJetTags:probTbq, pfDeepBoostedJetTags:probWcq, pfDeepBoostedJetTags:probWqq, pfDeepBoostedJetTags:probZbb, pfDeepBoostedJetTags:probZcc, pfDeepBoostedJetTags:probZqq, pfDeepBoostedJetTags:probHbb, pfDeepBoostedJetTags:probHcc, pfDeepBoostedJetTags:probHqqqq, pfDeepBoostedJetTags:probQCDbb, pfDeepBoostedJetTags:probQCDcc, pfDeepBoostedJetTags:probQCDb, pfDeepBoostedJetTags:probQCDc, pfDeepBoostedJetTags:probQCDothers, pfDeepBoostedDiscriminatorsJetTags:TvsQCD, pfDeepBoostedDiscriminatorsJetTags:WvsQCD, pfDeepBoostedDiscriminatorsJetTags:ZvsQCD, pfDeepBoostedDiscriminatorsJetTags:ZbbvsQCD, pfDeepBoostedDiscriminatorsJetTags:HbbvsQCD, pfDeepBoostedDiscriminatorsJetTags:H4qvsQCD, pfMassDecorrelatedDeepBoostedJetTags:probTbcq, pfMassDecorrelatedDeepBoostedJetTags:probTbqq, pfMassDecorrelatedDeepBoostedJetTags:probTbc, pfMassDecorrelatedDeepBoostedJetTags:probTbq, pfMassDecorrelatedDeepBoostedJetTags:probWcq, pfMassDecorrelatedDeepBoostedJetTags:probWqq, pfMassDecorrelatedDeepBoostedJetTags:probZbb, pfMassDecorrelatedDeepBoostedJetTags:probZcc, pfMassDecorrelatedDeepBoostedJetTags:probZqq, pfMassDecorrelatedDeepBoostedJetTags:probHbb, pfMassDecorrelatedDeepBoostedJetTags:probHcc, pfMassDecorrelatedDeepBoostedJetTags:probHqqqq, pfMassDecorrelatedDeepBoostedJetTags:probQCDbb, pfMassDecorrelatedDeepBoostedJetTags:probQCDcc, pfMassDecorrelatedDeepBoostedJetTags:probQCDb, pfMassDecorrelatedDeepBoostedJetTags:probQCDc, pfMassDecorrelatedDeepBoostedJetTags:probQCDothers, pfMassDecorrelatedDeepBoostedDiscriminatorsJetTags:TvsQCD, pfMassDecorrelatedDeepBoostedDiscriminatorsJetTags:WvsQCD, pfMassDecorrelatedDeepBoostedDiscriminatorsJetTags:ZvsQCD, pfMassDecorrelatedDeepBoostedDiscriminatorsJetTags:ZHbbvsQCD, pfMassDecorrelatedDeepBoostedDiscriminatorsJetTags:ZbbvsQCD, pfMassDecorrelatedDeepBoostedDiscriminatorsJetTags:HbbvsQCD, pfMassDecorrelatedDeepBoostedDiscriminatorsJetTags:H4qvsQCD, pfMassDecorrelatedDeepBoostedDiscriminatorsJetTags:ZHccvsQCD, pfMassDecorrelatedDeepBoostedDiscriminatorsJetTags:bbvsLight, pfMassDecorrelatedDeepBoostedDiscriminatorsJetTags:ccvsLight, pfParticleNetJetTags:probTbcq, pfParticleNetJetTags:probTbqq, pfParticleNetJetTags:probTbc, pfParticleNetJetTags:probTbq, pfParticleNetJetTags:probTbel, pfParticleNetJetTags:probTbmu, pfParticleNetJetTags:probTbta, pfParticleNetJetTags:probWcq, pfParticleNetJetTags:probWqq, pfParticleNetJetTags:probZbb, pfParticleNetJetTags:probZcc, pfParticleNetJetTags:probZqq, pfParticleNetJetTags:probHbb, pfParticleNetJetTags:probHcc, pfParticleNetJetTags:probHqqqq, pfParticleNetJetTags:probQCDbb, pfParticleNetJetTags:probQCDcc, pfParticleNetJetTags:probQCDb, pfParticleNetJetTags:probQCDc, pfParticleNetJetTags:probQCDothers, pfParticleNetDiscriminatorsJetTags:TvsQCD, pfParticleNetDiscriminatorsJetTags:WvsQCD, pfParticleNetDiscriminatorsJetTags:ZvsQCD, pfParticleNetDiscriminatorsJetTags:ZbbvsQCD, pfParticleNetDiscriminatorsJetTags:HbbvsQCD, pfParticleNetDiscriminatorsJetTags:HccvsQCD, pfParticleNetDiscriminatorsJetTags:H4qvsQCD, pfMassDecorrelatedParticleNetJetTags:probXbb, pfMassDecorrelatedParticleNetJetTags:probXcc, pfMassDecorrelatedParticleNetJetTags:probXqq, pfMassDecorrelatedParticleNetJetTags:probQCDbb, pfMassDecorrelatedParticleNetJetTags:probQCDcc, pfMassDecorrelatedParticleNetJetTags:probQCDb, pfMassDecorrelatedParticleNetJetTags:probQCDc, pfMassDecorrelatedParticleNetJetTags:probQCDothers, pfMassDecorrelatedParticleNetDiscriminatorsJetTags:XbbvsQCD, pfMassDecorrelatedParticleNetDiscriminatorsJetTags:XccvsQCD, pfMassDecorrelatedParticleNetDiscriminatorsJetTags:XqqvsQCD, pfParticleNetMassRegressionJetTags:mass, pfDeepDoubleBvLJetTags:probHbb, pfDeepDoubleCvLJetTags:probHcc, pfDeepDoubleCvBJetTags:probHcc, pfMassIndependentDeepDoubleBvLJetTags:probHbb, pfMassIndependentDeepDoubleCvLJetTags:probHcc, pfMassIndependentDeepDoubleCvBJetTags:probHcc, pfMassIndependentDeepDoubleBvLV2JetTags:probHbb, pfMassIndependentDeepDoubleCvLV2JetTags:probHcc, pfMassIndependentDeepDoubleCvBV2JetTags:probHcc
+add DeepMET Producers
+DEBUG 2024-01-15 13:08:02.618 UTC: 	 CRAB Client version: v3.231010
+DEBUG 2024-01-15 13:08:02.619 UTC: 	 Running on: Linux lxplus717.cern.ch 3.10.0-1160.102.1.el7.x86_64 #1 SMP Tue Oct 17 15:42:21 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2024-01-15 13:08:02.619 UTC: 	 Executing command: 'submit'
+DEBUG 2024-01-15 13:08:02.619 UTC: 	 Found CRAB cache file /afs/cern.ch/user/c/castells/.crab3
+INFO 2024-01-15 13:08:02.619 UTC: 	 Will use CRAB configuration file HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018_submit.py
+DEBUG 2024-01-15 13:08:02.619 UTC: 	 Loading CRAB configuration file.
+DEBUG 2024-01-15 13:08:02.742 UTC: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2024-01-15 13:08:02.763 UTC: 	 Checking credentials
+DEBUG 2024-01-15 13:08:02.763 UTC: 	 Found proxy file /tmp/x509up_u125472
+DEBUG 2024-01-15 13:08:02.763 UTC: 	 Making sure it has proper VOMS extension
+DEBUG 2024-01-15 13:08:02.763 UTC: 	 Executing command :
+ voms-proxy-info --vo --file /tmp/x509up_u125472
+DEBUG 2024-01-15 13:08:03.192 UTC: 	 output : cms
+
+ error: 
+ retcode : 0
+DEBUG 2024-01-15 13:08:03.192 UTC: 	 Getting proxy life time left
+DEBUG 2024-01-15 13:08:03.192 UTC: 	 Executing command :
+ voms-proxy-info --actimeleft --timeleft --file /tmp/x509up_u125472
+DEBUG 2024-01-15 13:08:03.639 UTC: 	 output : 30116
+30116
+
+ error: 
+ retcode : 0
+DEBUG 2024-01-15 13:08:03.639 UTC: 	 Proxy valid for 08:21:56 hours
+DEBUG 2024-01-15 13:08:03.646 UTC: 	 Encoded data for curl request: subresource=delegatedn
+DEBUG 2024-01-15 13:08:03.704 UTC: 	 Registering user credentials on myproxy for /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(01|02|03).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch|/DC=ch/DC=cern/OU=computers/CN=dciangot-tw.cern.ch
+DEBUG 2024-01-15 13:08:03.704 UTC: 	 Executing command :
+ voms-proxy-info --identity --file /tmp/x509up_u125472
+DEBUG 2024-01-15 13:08:04.110 UTC: 	 output : /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=castells/CN=840278/CN=Sergi Castells
+
+ error: 
+ retcode : 0
+DEBUG 2024-01-15 13:08:04.110 UTC: 	 Getting myproxy life time left for 85fedee37a5a447f0da843835c459265aae0d06e
+DEBUG 2024-01-15 13:08:04.110 UTC: 	 Executing command :
+ myproxy-info -s myproxy.cern.ch -l 85fedee37a5a447f0da843835c459265aae0d06e
+DEBUG 2024-01-15 13:08:04.397 UTC: 	 output : username: 85fedee37a5a447f0da843835c459265aae0d06e
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=castells/CN=840278/CN=Sergi Castells
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(01|02|03).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch|/DC=ch/DC=cern/OU=computers/CN=dciangot-tw.cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(01|02|03).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch|/DC=ch/DC=cern/OU=computers/CN=dciangot-tw.cern.ch
+  timeleft: 648:05:00  (27.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2024-01-15 13:08:04.398 UTC: 	 Myproxy is valid: 2333100
+DEBUG 2024-01-15 13:08:04.398 UTC: 	 Result of myproxy credential check:
+  Credential exists on myproxy: username: 85fedee37a5a447f0da843835c459265aae0d06e  - validity: 27 days, 0:05:00
+DEBUG 2024-01-15 13:08:04.398 UTC: 	 Command use: submit
+DEBUG 2024-01-15 13:08:04.398 UTC: 	 Options use: ['-c', 'HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018_submit.py']
+DEBUG 2024-01-15 13:08:04.398 UTC: 	 Encoded data for curl request: subresource=version
+DEBUG 2024-01-15 13:08:04.502 UTC: 	 CRABClient version: v3.231010
+DEBUG 2024-01-15 13:08:04.502 UTC: 	 Instance is prod
+DEBUG 2024-01-15 13:08:04.502 UTC: 	 Server base url is cmsweb.cern.ch
+DEBUG 2024-01-15 13:08:04.502 UTC: 	 Command api workflow
+DEBUG 2024-01-15 13:08:04.502 UTC: 	 Started submission
+DEBUG 2024-01-15 13:08:04.502 UTC: 	 Working on /eos/home-c/castells/MNConversion/CMSSW_10_6_26/src/hgg_nanoaod_tools/CRAB/MNConversion_crab/crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018
+DEBUG 2024-01-15 13:08:04.503 UTC: 	 Encoded data for curl request: subresource=backendurls
+DEBUG 2024-01-15 13:08:04.633 UTC: 	 Loading required information from the environment
+DEBUG 2024-01-15 13:08:04.633 UTC: 	 Found CMSSW_10_6_26 for slc7_amd64_gcc700 with base /eos/home-c/castells/MNConversion/CMSSW_10_6_26
+DEBUG 2024-01-15 13:08:04.633 UTC: 	 Loading required information from the environment
+DEBUG 2024-01-15 13:08:04.634 UTC: 	 Found CMSSW_10_6_26 for slc7_amd64_gcc700 with base /eos/home-c/castells/MNConversion/CMSSW_10_6_26
+DEBUG 2024-01-15 13:08:04.634 UTC: 	 UNIQUE NAME: tarUUID 8ea33b59-2bf3-484a-a397-f2ce8f0b10f5 
+DEBUG 2024-01-15 13:08:04.634 UTC: 	 self.config: from WMCore.Configuration import Configuration
+config = Configuration()
+config.section_('General')
+config.General.transferLogs = True
+config.General.transferOutputs = True
+config.General.workArea = 'MNConversion_crab'
+config.General.requestName = 'MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018'
+config.section_('JobType')
+config.JobType.priority = 30
+config.JobType.psetName = 'HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018_cfg.py'
+config.JobType.pluginName = 'Analysis'
+config.JobType.numCores = 1
+config.JobType.maxMemoryMB = 2500
+config.section_('Data')
+config.Data.inputDataset = '/HAHMHToAA_AToGG_MA-30GeV_TuneCP5_PSweights_13TeV-madgraph_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM'
+config.Data.publication = False
+config.Data.splitting = 'Automatic'
+config.Data.inputDBS = 'global'
+config.Data.lumiMask = ''
+config.Data.outLFNDirBase = '/store/user/castells/outputs/Signal_MC_2018'
+config.Data.totalUnits = -1
+config.section_('Site')
+config.Site.storageSite = 'T3_US_NotreDame'
+
+DEBUG 2024-01-15 13:08:04.634 UTC: 	 self.config.JobType.psetName: HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018_cfg.py
+INFO 2024-01-15 13:08:04.636 UTC: 	 Importing CMSSW configuration HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018_cfg.py
+INFO 2024-01-15 13:08:09.291 UTC: 	 Finished importing CMSSW configuration HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018_cfg.py
+DEBUG 2024-01-15 13:08:09.291 UTC: 	 Writing CMSSW configuration to /eos/home-c/castells/MNConversion/CMSSW_10_6_26/src/hgg_nanoaod_tools/CRAB/MNConversion_crab/crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018/inputs/PSet.py
+DEBUG 2024-01-15 13:08:10.340 UTC: 	 The following EDM output files will be collected: ['HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018.root']
+DEBUG 2024-01-15 13:08:10.340 UTC: 	 The following TFile output files will be collected: []
+DEBUG 2024-01-15 13:08:10.340 UTC: 	 The following user output files (not listed as PoolOuputModule or TFileService in the CMSSW PSet) will be collected: 
+DEBUG 2024-01-15 13:08:10.340 UTC: 	 Loading required information from the environment
+DEBUG 2024-01-15 13:08:10.340 UTC: 	 Found CMSSW_10_6_26 for slc7_amd64_gcc700 with base /eos/home-c/castells/MNConversion/CMSSW_10_6_26
+DEBUG 2024-01-15 13:08:10.340 UTC: 	 Making tarball in /eos/home-c/castells/MNConversion/CMSSW_10_6_26/src/hgg_nanoaod_tools/CRAB/MNConversion_crab/crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018/inputs/8ea33b59-2bf3-484a-a397-f2ce8f0b10f5default.tgz
+DEBUG 2024-01-15 13:08:10.343 UTC: 	 Checking directory /eos/home-c/castells/MNConversion/CMSSW_10_6_26/bin
+DEBUG 2024-01-15 13:08:10.344 UTC: 	 Adding directory /eos/home-c/castells/MNConversion/CMSSW_10_6_26/bin to tarball
+DEBUG 2024-01-15 13:08:10.348 UTC: 	 Checking directory /eos/home-c/castells/MNConversion/CMSSW_10_6_26/python
+DEBUG 2024-01-15 13:08:10.348 UTC: 	 Adding directory /eos/home-c/castells/MNConversion/CMSSW_10_6_26/python to tarball
+DEBUG 2024-01-15 13:08:10.675 UTC: 	 Checking directory /eos/home-c/castells/MNConversion/CMSSW_10_6_26/cfipython
+DEBUG 2024-01-15 13:08:10.676 UTC: 	 Adding directory /eos/home-c/castells/MNConversion/CMSSW_10_6_26/cfipython to tarball
+DEBUG 2024-01-15 13:08:10.749 UTC: 	 Checking directory /eos/home-c/castells/MNConversion/CMSSW_10_6_26/lib
+DEBUG 2024-01-15 13:08:10.749 UTC: 	 Adding directory /eos/home-c/castells/MNConversion/CMSSW_10_6_26/lib to tarball
+DEBUG 2024-01-15 13:08:11.295 UTC: 	 Checking directory /eos/home-c/castells/MNConversion/CMSSW_10_6_26/biglib
+DEBUG 2024-01-15 13:08:11.295 UTC: 	 Adding directory /eos/home-c/castells/MNConversion/CMSSW_10_6_26/biglib to tarball
+DEBUG 2024-01-15 13:08:11.297 UTC: 	 Checking directory /eos/home-c/castells/MNConversion/CMSSW_10_6_26/module
+DEBUG 2024-01-15 13:08:11.297 UTC: 	 Checking directory /eos/home-c/castells/MNConversion/CMSSW_10_6_26/config/SCRAM/hooks
+DEBUG 2024-01-15 13:08:11.297 UTC: 	 Adding directory /eos/home-c/castells/MNConversion/CMSSW_10_6_26/config/SCRAM/hooks to tarball
+DEBUG 2024-01-15 13:08:11.693 UTC: 	 Adding directory /eos/home-c/castells/MNConversion/CMSSW_10_6_26/src/DataFormats/NanoAOD/interface to tarball
+DEBUG 2024-01-15 13:08:11.701 UTC: 	 Adding directory /eos/home-c/castells/MNConversion/CMSSW_10_6_26/src/PhysicsTools/NanoAOD/interface to tarball
+DEBUG 2024-01-15 13:08:11.716 UTC: 	 Adding directory /eos/home-c/castells/MNConversion/CMSSW_10_6_26/src/PhysicsTools/NanoAOD/python to tarball
+DEBUG 2024-01-15 13:08:12.567 UTC: 	 Uploading archive /eos/home-c/castells/MNConversion/CMSSW_10_6_26/src/hgg_nanoaod_tools/CRAB/MNConversion_crab/crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018/inputs/8ea33b59-2bf3-484a-a397-f2ce8f0b10f5default.tgz (1.711914.1 MB) to the CRAB cache. Using URI https://cmsweb.cern.ch/S3/crabcache_prod
+DEBUG 2024-01-15 13:08:13.181 UTC: 	 Encoded data for curl request: tarballname=aa1fd8ff861c8b476877aa3f2698dd3dce511d39d36edf9dd27bd6c24ba86351.tar.gz&subresource=upload&objecttype=sandbox
+DEBUG 2024-01-15 13:08:13.255 UTC: 	 sandbox aa1fd8ff861c8b476877aa3f2698dd3dce511d39d36edf9dd27bd6c24ba86351.tar.gz is already in the S3 store, will not upload again
+DEBUG 2024-01-15 13:08:13.255 UTC: 	 Loading required information from the environment
+DEBUG 2024-01-15 13:08:13.255 UTC: 	 Found CMSSW_10_6_26 for slc7_amd64_gcc700 with base /eos/home-c/castells/MNConversion/CMSSW_10_6_26
+DEBUG 2024-01-15 13:08:13.255 UTC: 	 Making tarball in /eos/home-c/castells/MNConversion/CMSSW_10_6_26/src/hgg_nanoaod_tools/CRAB/MNConversion_crab/crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018/inputs/debugFiles.tgz
+DEBUG 2024-01-15 13:08:13.266 UTC: 	 Uploading archive /eos/home-c/castells/MNConversion/CMSSW_10_6_26/src/hgg_nanoaod_tools/CRAB/MNConversion_crab/crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018/inputs/debugFiles.tgz (2 KB) to the CRAB cache. Using URI https://cmsweb.cern.ch/S3/crabcache_prod
+DEBUG 2024-01-15 13:08:13.272 UTC: 	 Encoded data for curl request: tarballname=8a676a68063a04b43885f59e136fed207b31a166de095d3fc09f512f08e1da83.tar.gz&subresource=upload&objecttype=sandbox
+DEBUG 2024-01-15 13:08:13.335 UTC: 	 Will execute:
+curl -f -v -X POST  -H "User-Agent: CRAB" -F "key=castells/sandboxes/8a676a68063a04b43885f59e136fed207b31a166de095d3fc09f512f08e1da83.tar.gz" -F "AWSAccessKeyId=ab00fcc889f248c495d2875f15a3badb" -F "policy=eyJleHBpcmF0aW9uIjogIjIwMjQtMDEtMTVUMTQ6MDg6MTNaIiwgImNvbmRpdGlvbnMiOiBbeyJidWNrZXQiOiAiY3JhYmNhY2hlX3Byb2QifSwgeyJrZXkiOiAiY2FzdGVsbHMvc2FuZGJveGVzLzhhNjc2YTY4MDYzYTA0YjQzODg1ZjU5ZTEzNmZlZDIwN2IzMWExNjZkZTA5NWQzZmMwOWY1MTJmMDhlMWRhODMudGFyLmd6In1dfQ==" -F "signature=YhYdTs/0U19KfzUYZFaTZgoWHpY=" -F "file=@/eos/home-c/castells/MNConversion/CMSSW_10_6_26/src/hgg_nanoaod_tools/CRAB/MNConversion_crab/crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018/inputs/debugFiles.tgz" "https://s3.cern.ch/crabcache_prod"
+DEBUG 2024-01-15 13:08:14.416 UTC: 	 exitcode: 0
+stdout: 
+DEBUG 2024-01-15 13:08:14.417 UTC: 	 sandbox /eos/home-c/castells/MNConversion/CMSSW_10_6_26/src/hgg_nanoaod_tools/CRAB/MNConversion_crab/crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018/inputs/debugFiles.tgz successully uploaded to S3
+DEBUG 2024-01-15 13:08:14.417 UTC: 	 Result uploading input files: aa1fd8ff861c8b476877aa3f2698dd3dce511d39d36edf9dd27bd6c24ba86351.tar.gz 
+INFO 2024-01-15 13:08:14.417 UTC: 	 Sending the request to the server at cmsweb.cern.ch
+DEBUG 2024-01-15 13:08:14.417 UTC: 	 Submitting {'maxjobruntime': 1250, 'extrajdl': [], 'lfn': '/store/user/castells/outputs/Signal_MC_2018', 'savelogsflag': 1, 'useparent': 0, 'inputblocks': [], 'asyncdest': 'T3_US_NotreDame', 'algoargs': 480, 'cachefilename': 'aa1fd8ff861c8b476877aa3f2698dd3dce511d39d36edf9dd27bd6c24ba86351.tar.gz', 'numcores': 1, 'addoutputfiles': [], 'generator': 'pythia', 'maxmemory': 2500, 'partialdataset': 0, 'publishdbsurl': 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', 'priority': 30, 'jobsw': 'CMSSW_10_6_26', 'edmoutfiles': ['HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018.root'], 'userfiles': [], 'primarydataset': '', 'inputdata': '/HAHMHToAA_AToGG_MA-30GeV_TuneCP5_PSweights_13TeV-madgraph_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM', 'ignorelocality': 0, 'dryrun': 0, 'workflow': 'crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018', 'cacheurl': u'https://cmsweb.cern.ch/S3/crabcache_prod', 'nonprodsw': 0, 'tfileoutfiles': [], 'oneEventMode': 0, 'debugfilename': '8a676a68063a04b43885f59e136fed207b31a166de095d3fc09f512f08e1da83.tar.gz', 'saveoutput': 1, 'publication': 0, 'jobarch': 'slc7_amd64_gcc700', 'totalunits': -1, 'splitalgo': 'Automatic', 'ignoreglobalblacklist': 0, 'nonvaliddata': 0, 'dbsurl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', 'jobtype': 'Analysis', 'requireaccelerator': 0, 'publishname2': ''} 
+DEBUG 2024-01-15 13:08:14.418 UTC: 	 Encoded data for curl request: maxjobruntime=1250&lfn=%2Fstore%2Fuser%2Fcastells%2Foutputs%2FSignal_MC_2018&savelogsflag=1&useparent=0&asyncdest=T3_US_NotreDame&algoargs=480&cachefilename=aa1fd8ff861c8b476877aa3f2698dd3dce511d39d36edf9dd27bd6c24ba86351.tar.gz&numcores=1&generator=pythia&maxmemory=2500&partialdataset=0&publishdbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fphys03%2FDBSWriter&priority=30&jobsw=CMSSW_10_6_26&primarydataset=&inputdata=%2FHAHMHToAA_AToGG_MA-30GeV_TuneCP5_PSweights_13TeV-madgraph_pythia8%2FRunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2%2FMINIAODSIM&ignorelocality=0&dryrun=0&workflow=crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018&cacheurl=https%3A%2F%2Fcmsweb.cern.ch%2FS3%2Fcrabcache_prod&nonprodsw=0&oneEventMode=0&debugfilename=8a676a68063a04b43885f59e136fed207b31a166de095d3fc09f512f08e1da83.tar.gz&saveoutput=1&publication=0&jobarch=slc7_amd64_gcc700&totalunits=-1&splitalgo=Automatic&ignoreglobalblacklist=0&nonvaliddata=0&dbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fglobal%2FDBSReader&jobtype=Analysis&requireaccelerator=0&publishname2=&edmoutfiles=HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018.root
+DEBUG 2024-01-15 13:08:14.511 UTC: 	 Result: {u'result': [{u'RequestName': u'240115_130814:castells_crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018'}]}
+INFO 2024-01-15 13:08:14.524 UTC: 	 Success: Your task has been delivered to the prod CRAB3 server.
+INFO 2024-01-15 13:08:14.524 UTC: 	 Task name: 240115_130814:castells_crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018
+INFO 2024-01-15 13:08:14.524 UTC: 	 Project dir: MNConversion_crab/crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018
+INFO 2024-01-15 13:08:14.524 UTC: 	 Please use ' crab status -d MNConversion_crab/crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018 ' to check how the submission process proceeds.
+DEBUG 2024-01-15 13:08:14.525 UTC: 	 About to return
+INFO 2024-01-15 13:08:14.559 UTC: 	 Log file is /eos/home-c/castells/MNConversion/CMSSW_10_6_26/src/hgg_nanoaod_tools/CRAB/MNConversion_crab/crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018/crab.log
+DEBUG 2024-01-15 14:31:31.830 UTC: 	 CRAB Client version: v3.231101
+DEBUG 2024-01-15 14:31:31.830 UTC: 	 Running on: Linux lxplus717.cern.ch 3.10.0-1160.102.1.el7.x86_64 #1 SMP Tue Oct 17 15:42:21 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2024-01-15 14:31:31.830 UTC: 	 Executing command: 'status'
+DEBUG 2024-01-15 14:31:31.830 UTC: 	 Found CRAB cache file /afs/cern.ch/user/c/castells/.crab3
+DEBUG 2024-01-15 14:31:31.839 UTC: 	 Checking credentials
+DEBUG 2024-01-15 14:31:31.839 UTC: 	 Found proxy file /tmp/x509up_u125472
+DEBUG 2024-01-15 14:31:31.839 UTC: 	 Making sure it has proper VOMS extension
+DEBUG 2024-01-15 14:31:31.839 UTC: 	 Executing command :
+ voms-proxy-info --vo --file /tmp/x509up_u125472
+DEBUG 2024-01-15 14:31:32.263 UTC: 	 output : cms
+
+ error: 
+ retcode : 0
+DEBUG 2024-01-15 14:31:32.263 UTC: 	 Getting proxy life time left
+DEBUG 2024-01-15 14:31:32.263 UTC: 	 Executing command :
+ voms-proxy-info --actimeleft --timeleft --file /tmp/x509up_u125472
+DEBUG 2024-01-15 14:31:32.652 UTC: 	 output : 25107
+25107
+
+ error: 
+ retcode : 0
+DEBUG 2024-01-15 14:31:32.652 UTC: 	 Proxy valid for 06:58:27 hours
+DEBUG 2024-01-15 14:31:32.653 UTC: 	 Encoded data for curl request: subresource=delegatedn
+DEBUG 2024-01-15 14:31:32.718 UTC: 	 Registering user credentials on myproxy for /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(01|02|03).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch|/DC=ch/DC=cern/OU=computers/CN=dciangot-tw.cern.ch
+DEBUG 2024-01-15 14:31:32.718 UTC: 	 Executing command :
+ voms-proxy-info --identity --file /tmp/x509up_u125472
+DEBUG 2024-01-15 14:31:33.131 UTC: 	 output : /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=castells/CN=840278/CN=Sergi Castells
+
+ error: 
+ retcode : 0
+DEBUG 2024-01-15 14:31:33.131 UTC: 	 Getting myproxy life time left for 85fedee37a5a447f0da843835c459265aae0d06e
+DEBUG 2024-01-15 14:31:33.131 UTC: 	 Executing command :
+ myproxy-info -s myproxy.cern.ch -l 85fedee37a5a447f0da843835c459265aae0d06e
+DEBUG 2024-01-15 14:31:33.346 UTC: 	 output : username: 85fedee37a5a447f0da843835c459265aae0d06e
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=castells/CN=840278/CN=Sergi Castells
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(01|02|03).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch|/DC=ch/DC=cern/OU=computers/CN=dciangot-tw.cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(01|02|03).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch|/DC=ch/DC=cern/OU=computers/CN=dciangot-tw.cern.ch
+  timeleft: 646:41:31  (26.9 days)
+
+ error: 
+ retcode : 0
+DEBUG 2024-01-15 14:31:33.346 UTC: 	 Myproxy is valid: 2328060
+DEBUG 2024-01-15 14:31:33.346 UTC: 	 Result of myproxy credential check:
+  Credential exists on myproxy: username: 85fedee37a5a447f0da843835c459265aae0d06e  - validity: 26 days, 22:41:00
+DEBUG 2024-01-15 14:31:33.346 UTC: 	 Retrieving username ...
+DEBUG 2024-01-15 14:31:33.346 UTC: 	 Retrieving username from CRIC...
+DEBUG 2024-01-15 14:31:34.239 UTC: 	 username is castells
+INFO 2024-01-15 14:31:34.682 UTC: 	 Rucio client intialized for account castells
+DEBUG 2024-01-15 14:31:34.685 UTC: 	 Command use: status
+DEBUG 2024-01-15 14:31:34.685 UTC: 	 Options use: ['--long', '-d', 'MNConversion_crab/crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018/']
+DEBUG 2024-01-15 14:31:34.686 UTC: 	 Encoded data for curl request: subresource=version
+DEBUG 2024-01-15 14:31:34.774 UTC: 	 CRABClient version: v3.231101
+DEBUG 2024-01-15 14:31:34.774 UTC: 	 Instance is prod
+DEBUG 2024-01-15 14:31:34.774 UTC: 	 Server base url is cmsweb.cern.ch
+DEBUG 2024-01-15 14:31:34.774 UTC: 	 Command api workflow
+DEBUG 2024-01-15 14:31:34.774 UTC: 	 Encoded data for curl request: subresource=search&workflow=240115_130814%3Acastells_crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018
+DEBUG 2024-01-15 14:31:34.865 UTC: 	 Got information from server oracle database: {'desc': {'columns': ['tm_taskname', 'tm_activity', 'panda_jobset_id', 'tm_task_status', 'tm_task_command', 'tm_start_time', 'tm_start_injection', 'tm_end_injection', 'tm_task_failure', 'tm_job_sw', 'tm_job_arch', 'tm_input_dataset', 'tm_nonvalid_input_dataset', 'tm_use_parent', 'tm_site_whitelist', 'tm_site_blacklist', 'tm_split_algo', 'tm_split_args', 'tm_user_sandbox', 'tm_cache_url', 'tm_username', 'tm_user_dn', 'tm_user_vo', 'tm_user_role', 'tm_user_group', 'tm_publish_name', 'tm_publish_groupname', 'tm_asyncdest', 'tm_dbs_url', 'tm_publish_dbs_url', 'tm_publication', 'tm_outfiles', 'tm_tfile_outfiles', 'tm_edm_outfiles', 'tm_job_type', 'tm_generator', 'tm_events_per_lumi', 'tm_arguments', 'panda_resubmitted_jobs', 'tm_save_logs', 'tw_name', 'tm_user_infiles', 'tm_maxjobruntime', 'tm_numcores', 'tm_maxmemory', 'tm_priority', 'tm_output_dataset', 'tm_task_warnings', 'tm_user_webdir', 'tm_scriptexe', 'tm_scriptargs', 'tm_extrajdl', 'tm_asourl', 'tm_collector', 'tm_schedd', 'tm_dry_run', 'tm_user_files', 'tm_transfer_outputs', 'tm_output_lfn', 'tm_ignore_locality', 'tm_fail_limit', 'tm_one_event_mode', 'tm_secondary_input_dataset', 'tm_primary_dataset', 'tm_last_publication', 'tm_debug_files', 'clusterid', 'tm_asodb', 'tm_ignore_global_blacklist', 'tm_submitter_ip_addr', 'tm_totalunits', 'tm_ddm_reqid', 'tm_user_config', 'tm_transfer_container', 'tm_transfer_rule', 'tm_publish_rule', 'tm_multipub_rule']}, 'result': ['240115_130814:castells_crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018', 'None', 'None', 'SUBMITTED', 'SUBMIT', '2024-01-15 13:08:14.503786', 'None', '2024-01-15 13:09:06.539141', 'None', 'CMSSW_10_6_26', 'slc7_amd64_gcc700', '/HAHMHToAA_AToGG_MA-30GeV_TuneCP5_PSweights_13TeV-madgraph_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM', 'F', '0', '[]', '[]', 'Automatic', "{'halt_job_on_file_boundaries': False, 'splitOnRun': False, 'minutes_per_job': 480, 'runs': [], 'lumis': []}", 'aa1fd8ff861c8b476877aa3f2698dd3dce511d39d36edf9dd27bd6c24ba86351.tar.gz', 'https://cmsweb.cern.ch/S3/crabcache_prod', 'castells', '/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=castells/CN=840278/CN=Sergi Castells', 'cms', 'None', 'None', 'crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018-00000000000000000000000000000000', 'F', 'T3_US_NotreDame', 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', 'F', '[]', '[]', "['HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018.root']", 'Analysis', 'pythia', 'None', '{}', 'None', 'T', 'crab-prod-tw01', '[]', '1250', '1', '2500', '30', "['/FakeDataset/fakefile-FakePublish-69dae2044bd927b66f8c8e89a954c174/USER']", '[]', 'http://vocms0195.cern.ch/mon/castells/240115_130814:castells_crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018', 'None', '[]', '[]', 'None', 'cmsgwms-collector-global.cern.ch:9620,cmsgwms-collector-global.fnal.gov:9620', 'crab3@vocms0195.cern.ch', 'F', '[]', 'T', '/store/user/castells/outputs/Signal_MC_2018', 'F', 'None', 'F', 'None', 'HAHMHToAA_AToGG_MA-30GeV_TuneCP5_PSweights_13TeV-madgraph_pythia8', 'None', '8a676a68063a04b43885f59e136fed207b31a166de095d3fc09f512f08e1da83.tar.gz', '97452798', 'None', 'F', '137.138.154.184', '-1.0', 'None', '{"partialdataset": false, "requireaccelerator": false, "acceleratorparams": null, "inputblocks": null}', 'None', 'None', 'None', 'None']}
+INFO 2024-01-15 14:31:34.866 UTC: 	 CRAB project directory:		/eos/home-c/castells/MNConversion/CMSSW_10_6_26/src/hgg_nanoaod_tools/CRAB/MNConversion_crab/crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018
+INFO 2024-01-15 14:31:34.866 UTC: 	 Task name:			240115_130814:castells_crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018
+INFO 2024-01-15 14:31:34.866 UTC: 	 Grid scheduler - Task Worker:	crab3@vocms0195.cern.ch - crab-prod-tw01
+INFO 2024-01-15 14:31:34.866 UTC: 	 Status on the CRAB server:	SUBMITTED
+INFO 2024-01-15 14:31:34.866 UTC: 	 Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/240115_130814%3Acastells_crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018
+INFO 2024-01-15 14:31:34.872 UTC: 	 Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=castells&var-task=240115_130814%3Acastells_crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018&from=1705320494000&to=now
+DEBUG 2024-01-15 14:31:34.872 UTC: 	 The CRAB server submitted your task to the Grid scheduler (cluster ID: 97452798)
+DEBUG 2024-01-15 14:31:34.872 UTC: 	 Webdir is located at http://vocms0195.cern.ch/mon/castells/240115_130814:castells_crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018
+DEBUG 2024-01-15 14:31:34.872 UTC: 	 Encoded data for curl request: subresource=webdirprx&workflow=240115_130814%3Acastells_crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018
+DEBUG 2024-01-15 14:31:34.954 UTC: 	 Proxied webdir is located at https://cmsweb.cern.ch:8443/scheddmon/0195/castells/240115_130814:castells_crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018
+DEBUG 2024-01-15 14:31:34.954 UTC: 	 Retrieving 'status_cache' file from https://cmsweb.cern.ch:8443/scheddmon/0195/castells/240115_130814:castells_crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018/status_cache.pkl
+DEBUG 2024-01-15 14:31:34.954 UTC: 	 Will execute:
+curl -sS --capath /etc/grid-security/certificates --cert /tmp/x509up_u125472 --key /tmp/x509up_u125472 -o /tmp/crab_status-cache-96kv7lt5.pkl -w %"{http_code}" "https://cmsweb.cern.ch:8443/scheddmon/0195/castells/240115_130814:castells_crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018/status_cache.pkl"
+DEBUG 2024-01-15 14:31:34.954 UTC: 	 Executing command :
+ curl -sS --capath /etc/grid-security/certificates --cert /tmp/x509up_u125472 --key /tmp/x509up_u125472 -o /tmp/crab_status-cache-96kv7lt5.pkl -w %"{http_code}" "https://cmsweb.cern.ch:8443/scheddmon/0195/castells/240115_130814:castells_crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018/status_cache.pkl"
+DEBUG 2024-01-15 14:31:34.998 UTC: 	 output : 200
+ error: 
+ retcode : 0
+DEBUG 2024-01-15 14:31:34.998 UTC: 	 exitcode: 0
+stdout: 200
+stderr: 
+error details: 
+DEBUG 2024-01-15 14:31:34.998 UTC: 	 Got information from status cache file: {'0-2': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['T2_CH_CERN', 'T2_CH_CERN'], 'ResidentSetSize': [2373868], 'SubmitTimes': [1705324150.0], 'StartTimes': [1705324208.0], 'EndTimes': [1705325405.0], 'TotalUserCpuTimeHistory': [1061], 'TotalSysCpuTimeHistory': [28], 'WallDurations': [0, 1197.0], 'JobIds': ['97452800.0'], 'State': 'finished', 'RecordedSite': True}, '0-3': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['T2_CH_CERN', 'T2_CH_CERN'], 'ResidentSetSize': [1461720], 'SubmitTimes': [1705324150.0], 'StartTimes': [1705324209.0], 'EndTimes': [1705325398.0], 'TotalUserCpuTimeHistory': [1000], 'TotalSysCpuTimeHistory': [40], 'WallDurations': [0, 1189.0], 'JobIds': ['97452801.0'], 'State': 'finished', 'RecordedSite': True}, '0-1': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['T2_CH_CERN', 'T2_CH_CERN'], 'ResidentSetSize': [2059224], 'SubmitTimes': [1705324151.0], 'StartTimes': [1705324208.0], 'EndTimes': [1705325357.0], 'TotalUserCpuTimeHistory': [1019], 'TotalSysCpuTimeHistory': [33], 'WallDurations': [0, 1149.0], 'JobIds': ['97452802.0'], 'State': 'finished', 'RecordedSite': True}, '0-4': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['T2_CH_CERN', 'T2_CH_CERN'], 'ResidentSetSize': [2368148], 'SubmitTimes': [1705324151.0], 'StartTimes': [1705324208.0], 'EndTimes': [1705325490.0], 'TotalUserCpuTimeHistory': [1008], 'TotalSysCpuTimeHistory': [45], 'WallDurations': [0, 1282.0], 'JobIds': ['97452803.0'], 'State': 'finished', 'RecordedSite': True}, '0-5': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['T2_CH_CERN', 'T2_CH_CERN'], 'ResidentSetSize': [2276896], 'SubmitTimes': [1705324151.0], 'StartTimes': [1705324209.0], 'EndTimes': [1705325293.0], 'TotalUserCpuTimeHistory': [955], 'TotalSysCpuTimeHistory': [25], 'WallDurations': [0, 1084.0], 'JobIds': ['97452804.0'], 'State': 'finished', 'RecordedSite': True}, '1': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['Unknown', 'T2_CH_CERN', 'T2_CH_CERN'], 'ResidentSetSize': [2141224], 'SubmitTimes': [1705325969.0], 'StartTimes': [1705326019.0], 'EndTimes': [], 'TotalUserCpuTimeHistory': [1897.0], 'TotalSysCpuTimeHistory': [43.0], 'WallDurations': [8.0, 293.9814250469208, 2111.0], 'JobIds': ['97454383.0'], 'State': 'running', 'RecordedSite': True}, '2': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['Unknown', 'T2_CH_CERN', 'T2_CH_CERN'], 'ResidentSetSize': [2144644], 'SubmitTimes': [1705325969.0], 'StartTimes': [1705326017.0], 'EndTimes': [], 'TotalUserCpuTimeHistory': [2472.0], 'TotalSysCpuTimeHistory': [52.0], 'WallDurations': [8.0, 295.9814250469208, 2710.0], 'JobIds': ['97454384.0'], 'State': 'running', 'RecordedSite': True}, '3': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['Unknown', 'T2_CH_CERN', 'T2_CH_CERN'], 'ResidentSetSize': [2152416], 'SubmitTimes': [1705325969.0], 'StartTimes': [1705326017.0], 'EndTimes': [], 'TotalUserCpuTimeHistory': [1596.0], 'TotalSysCpuTimeHistory': [35.0], 'WallDurations': [10.0, 295.9814250469208, 1812.0], 'JobIds': ['97454385.0'], 'State': 'running', 'RecordedSite': True}, '4': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['Unknown', 'T2_CH_CERN', 'T2_CH_CERN'], 'ResidentSetSize': [2249504], 'SubmitTimes': [1705325969.0], 'StartTimes': [1705326017.0], 'EndTimes': [], 'TotalUserCpuTimeHistory': [2095.0], 'TotalSysCpuTimeHistory': [50.0], 'WallDurations': [8.0, 295.9814250469208, 2412.0], 'JobIds': ['97454386.0'], 'State': 'running', 'RecordedSite': True}, '5': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['Unknown', 'T2_CH_CERN', 'T2_CH_CERN'], 'ResidentSetSize': [2378828], 'SubmitTimes': [1705325969.0], 'StartTimes': [1705326019.0], 'EndTimes': [], 'TotalUserCpuTimeHistory': [2358.0], 'TotalSysCpuTimeHistory': [51.0], 'WallDurations': [8.0, 293.9814250469208, 2711.0], 'JobIds': ['97454387.0'], 'State': 'running', 'RecordedSite': True}, '6': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['Unknown', 'T2_CH_CERN', 'T2_CH_CERN'], 'ResidentSetSize': [2402756], 'SubmitTimes': [1705325969.0], 'StartTimes': [1705326017.0], 'EndTimes': [], 'TotalUserCpuTimeHistory': [1125.0], 'TotalSysCpuTimeHistory': [24.0], 'WallDurations': [8.0, 295.9814250469208, 1212.0], 'JobIds': ['97454388.0'], 'State': 'running', 'RecordedSite': True}, '7': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['Unknown', 'T2_CH_CERN', 'T2_CH_CERN'], 'ResidentSetSize': [2274704], 'SubmitTimes': [1705325969.0], 'StartTimes': [1705326019.0], 'EndTimes': [1705328350.0], 'TotalUserCpuTimeHistory': [2186], 'TotalSysCpuTimeHistory': [44], 'WallDurations': [8.0, 293.9814250469208, 2331.0], 'JobIds': ['97454389.0'], 'State': 'transferring', 'RecordedSite': True}}
+INFO 2024-01-15 14:31:34.998 UTC: 	 Status on the scheduler:	SUBMITTED
+INFO 2024-01-15 14:31:34.998 UTC: 	 
+The job splitting of this task is 'Automatic', please refer to this FAQ for a description of the jobs status summary:
+https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3FAQ#What_is_the_Automatic_splitting
+INFO 2024-01-15 14:31:34.998 UTC: 	 More details of Automatic Splitting process for this task (including possible failures) are in the Dagman Log files in:
+https://cmsweb.cern.ch:8443/scheddmon/0195/castells/240115_130814:castells_crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018/AutomaticSplitting/
+INFO 2024-01-15 14:31:34.998 UTC: 	 
+Probe jobs status:              no output    		100.0% (5/5)
+INFO 2024-01-15 14:31:34.998 UTC: 	 
+Main jobs status:               running      		 85.7% (6/7)
+INFO 2024-01-15 14:31:34.999 UTC: 	 				transferring 		 14.3% (1/7)
+INFO 2024-01-15 14:31:34.999 UTC: 	 
+No publication information (publication has been disabled in the CRAB configuration file)
+INFO 2024-01-15 14:31:34.999 UTC: 	 
+Extended Job Status Table:
+
+ Job State        Most Recent Site        Runtime   Mem (MB)      CPU %    Retries   Restarts      Waste       Exit Code
+ 0-1 no output    T2_CH_CERN              0:19:09       2010         92          0          0    0:00:00               0
+ 0-2 no output    T2_CH_CERN              0:19:57       2318         91          0          0    0:00:00               0
+ 0-3 no output    T2_CH_CERN              0:19:49       1427         87          0          0    0:00:00               0
+ 0-4 no output    T2_CH_CERN              0:21:22       2312         82          0          0    0:00:00               0
+ 0-5 no output    T2_CH_CERN              0:18:04       2223         90          0          0    0:00:00               0
+   1 running      T2_CH_CERN              0:35:11       2091         92          0          0    0:05:01         Unknown
+   2 running      T2_CH_CERN              0:45:10       2094         93          0          0    0:05:03         Unknown
+   3 running      T2_CH_CERN              0:30:12       2101         90          0          0    0:05:05         Unknown
+   4 running      T2_CH_CERN              0:40:12       2196         89          0          0    0:05:03         Unknown
+   5 running      T2_CH_CERN              0:45:11       2323         89          0          0    0:05:01         Unknown
+   6 running      T2_CH_CERN              0:20:12       2346         95          0          0    0:05:03         Unknown
+   7 transferring T2_CH_CERN              0:38:51       2221         96          0          0    0:05:01         Unknown
+DEBUG 2024-01-15 14:31:34.999 UTC: 	 
+ Job Cluster Id
+ 0-2 ['97452800.0']
+ 0-3 ['97452801.0']
+ 0-1 ['97452802.0']
+ 0-4 ['97452803.0']
+ 0-5 ['97452804.0']
+   1 ['97454383.0']
+   2 ['97454384.0']
+   3 ['97454385.0']
+   4 ['97454386.0']
+   5 ['97454387.0']
+   6 ['97454388.0']
+   7 ['97454389.0']
+INFO 2024-01-15 14:31:34.999 UTC: 	 
+Warning: the max jobs runtime is less than 30% of the task requested value (1250 min), please consider to request a lower value for failed jobs (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+INFO 2024-01-15 14:31:34.999 UTC: 	 
+Summary of run jobs:
+ * Memory: 2221MB min, 2221MB max, 2221MB ave
+ * Runtime: 0:18:04 min, 0:38:51 max, 0:38:51 ave
+ * CPU eff: 96% min, 96% max, 96% ave
+ * Waste: 0:05:01 (11% of total)
+
+INFO 2024-01-15 14:31:35.012 UTC: 	 Log file is /eos/home-c/castells/MNConversion/CMSSW_10_6_26/src/hgg_nanoaod_tools/CRAB/MNConversion_crab/crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018/crab.log
+DEBUG 2024-01-16 11:14:49.225 UTC: 	 CRAB Client version: v3.231101
+DEBUG 2024-01-16 11:14:49.225 UTC: 	 Running on: Linux lxplus772.cern.ch 3.10.0-1160.102.1.el7.x86_64 #1 SMP Tue Oct 17 15:42:21 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2024-01-16 11:14:49.225 UTC: 	 Executing command: 'status'
+DEBUG 2024-01-16 11:14:49.225 UTC: 	 Found CRAB cache file /afs/cern.ch/user/c/castells/.crab3
+DEBUG 2024-01-16 11:14:49.261 UTC: 	 Checking credentials
+DEBUG 2024-01-16 11:14:49.261 UTC: 	 Found proxy file /tmp/x509up_u125472
+DEBUG 2024-01-16 11:14:49.261 UTC: 	 Making sure it has proper VOMS extension
+DEBUG 2024-01-16 11:14:49.261 UTC: 	 Executing command :
+ voms-proxy-info --vo --file /tmp/x509up_u125472
+DEBUG 2024-01-16 11:14:49.645 UTC: 	 output : cms
+
+ error: 
+ retcode : 0
+DEBUG 2024-01-16 11:14:49.645 UTC: 	 Getting proxy life time left
+DEBUG 2024-01-16 11:14:49.646 UTC: 	 Executing command :
+ voms-proxy-info --actimeleft --timeleft --file /tmp/x509up_u125472
+DEBUG 2024-01-16 11:14:50.034 UTC: 	 output : 352759
+352759
+
+ error: 
+ retcode : 0
+DEBUG 2024-01-16 11:14:50.034 UTC: 	 Proxy valid for 97:59:19 hours
+DEBUG 2024-01-16 11:14:50.034 UTC: 	 Encoded data for curl request: subresource=delegatedn
+DEBUG 2024-01-16 11:14:50.096 UTC: 	 Registering user credentials on myproxy for /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(01|02|03).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch|/DC=ch/DC=cern/OU=computers/CN=dciangot-tw.cern.ch
+DEBUG 2024-01-16 11:14:50.096 UTC: 	 Executing command :
+ voms-proxy-info --identity --file /tmp/x509up_u125472
+DEBUG 2024-01-16 11:14:50.467 UTC: 	 output : /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=castells/CN=840278/CN=Sergi Castells
+
+ error: 
+ retcode : 0
+DEBUG 2024-01-16 11:14:50.467 UTC: 	 Getting myproxy life time left for 85fedee37a5a447f0da843835c459265aae0d06e
+DEBUG 2024-01-16 11:14:50.467 UTC: 	 Executing command :
+ myproxy-info -s myproxy.cern.ch -l 85fedee37a5a447f0da843835c459265aae0d06e
+DEBUG 2024-01-16 11:14:50.745 UTC: 	 output : username: 85fedee37a5a447f0da843835c459265aae0d06e
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=castells/CN=840278/CN=Sergi Castells
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(01|02|03).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch|/DC=ch/DC=cern/OU=computers/CN=dciangot-tw.cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(01|02|03).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch|/DC=ch/DC=cern/OU=computers/CN=dciangot-tw.cern.ch
+  timeleft: 625:58:14  (26.1 days)
+
+ error: 
+ retcode : 0
+DEBUG 2024-01-16 11:14:50.745 UTC: 	 Myproxy is valid: 2253480
+DEBUG 2024-01-16 11:14:50.745 UTC: 	 Result of myproxy credential check:
+  Credential exists on myproxy: username: 85fedee37a5a447f0da843835c459265aae0d06e  - validity: 26 days, 1:58:00
+DEBUG 2024-01-16 11:14:50.746 UTC: 	 Retrieving username ...
+DEBUG 2024-01-16 11:14:50.746 UTC: 	 Retrieving username from CRIC...
+DEBUG 2024-01-16 11:14:51.576 UTC: 	 username is castells
+INFO 2024-01-16 11:14:51.961 UTC: 	 Rucio client intialized for account castells
+DEBUG 2024-01-16 11:14:51.964 UTC: 	 Command use: status
+DEBUG 2024-01-16 11:14:51.964 UTC: 	 Options use: ['--long', '--verboseErrors', 'MNConversion_crab/crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018/']
+DEBUG 2024-01-16 11:14:51.964 UTC: 	 Encoded data for curl request: subresource=version
+ERROR 2024-01-16 11:14:51.980 UTC: 	 Keyboard Interrupted
+INFO 2024-01-16 11:14:51.985 UTC: 	 Log file is /eos/home-c/castells/MNConversion/CMSSW_10_6_26/src/hgg_nanoaod_tools/CRAB/MNConversion_crab/crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018/crab.log
+DEBUG 2024-01-16 11:16:43.543 UTC: 	 CRAB Client version: v3.231101
+DEBUG 2024-01-16 11:16:43.544 UTC: 	 Running on: Linux lxplus772.cern.ch 3.10.0-1160.102.1.el7.x86_64 #1 SMP Tue Oct 17 15:42:21 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2024-01-16 11:16:43.544 UTC: 	 Executing command: 'status'
+DEBUG 2024-01-16 11:16:43.544 UTC: 	 Found CRAB cache file /afs/cern.ch/user/c/castells/.crab3
+DEBUG 2024-01-16 11:16:43.551 UTC: 	 Checking credentials
+DEBUG 2024-01-16 11:16:43.552 UTC: 	 Found proxy file /tmp/x509up_u125472
+DEBUG 2024-01-16 11:16:43.552 UTC: 	 Making sure it has proper VOMS extension
+DEBUG 2024-01-16 11:16:43.552 UTC: 	 Executing command :
+ voms-proxy-info --vo --file /tmp/x509up_u125472
+DEBUG 2024-01-16 11:16:43.904 UTC: 	 output : cms
+
+ error: 
+ retcode : 0
+DEBUG 2024-01-16 11:16:43.904 UTC: 	 Getting proxy life time left
+DEBUG 2024-01-16 11:16:43.904 UTC: 	 Executing command :
+ voms-proxy-info --actimeleft --timeleft --file /tmp/x509up_u125472
+DEBUG 2024-01-16 11:16:44.279 UTC: 	 output : 352645
+352645
+
+ error: 
+ retcode : 0
+DEBUG 2024-01-16 11:16:44.279 UTC: 	 Proxy valid for 97:57:25 hours
+DEBUG 2024-01-16 11:16:44.279 UTC: 	 Encoded data for curl request: subresource=delegatedn
+DEBUG 2024-01-16 11:16:44.337 UTC: 	 Registering user credentials on myproxy for /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(01|02|03).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch|/DC=ch/DC=cern/OU=computers/CN=dciangot-tw.cern.ch
+DEBUG 2024-01-16 11:16:44.337 UTC: 	 Executing command :
+ voms-proxy-info --identity --file /tmp/x509up_u125472
+DEBUG 2024-01-16 11:16:44.712 UTC: 	 output : /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=castells/CN=840278/CN=Sergi Castells
+
+ error: 
+ retcode : 0
+DEBUG 2024-01-16 11:16:44.712 UTC: 	 Getting myproxy life time left for 85fedee37a5a447f0da843835c459265aae0d06e
+DEBUG 2024-01-16 11:16:44.712 UTC: 	 Executing command :
+ myproxy-info -s myproxy.cern.ch -l 85fedee37a5a447f0da843835c459265aae0d06e
+DEBUG 2024-01-16 11:16:44.980 UTC: 	 output : username: 85fedee37a5a447f0da843835c459265aae0d06e
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=castells/CN=840278/CN=Sergi Castells
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(01|02|03).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch|/DC=ch/DC=cern/OU=computers/CN=dciangot-tw.cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(01|02|03).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch|/DC=ch/DC=cern/OU=computers/CN=dciangot-tw.cern.ch
+  timeleft: 625:56:20  (26.1 days)
+
+ error: 
+ retcode : 0
+DEBUG 2024-01-16 11:16:44.980 UTC: 	 Myproxy is valid: 2253360
+DEBUG 2024-01-16 11:16:44.981 UTC: 	 Result of myproxy credential check:
+  Credential exists on myproxy: username: 85fedee37a5a447f0da843835c459265aae0d06e  - validity: 26 days, 1:56:00
+DEBUG 2024-01-16 11:16:44.981 UTC: 	 Retrieving username ...
+DEBUG 2024-01-16 11:16:44.981 UTC: 	 Retrieving username from CRIC...
+DEBUG 2024-01-16 11:16:45.894 UTC: 	 username is castells
+INFO 2024-01-16 11:16:46.231 UTC: 	 Rucio client intialized for account castells
+DEBUG 2024-01-16 11:16:46.236 UTC: 	 Command use: status
+DEBUG 2024-01-16 11:16:46.236 UTC: 	 Options use: ['--long', '--verboseErrors', 'MNConversion_crab/crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018/']
+DEBUG 2024-01-16 11:16:46.236 UTC: 	 Encoded data for curl request: subresource=version
+DEBUG 2024-01-16 11:16:46.314 UTC: 	 CRABClient version: v3.231101
+DEBUG 2024-01-16 11:16:46.314 UTC: 	 Instance is prod
+DEBUG 2024-01-16 11:16:46.314 UTC: 	 Server base url is cmsweb.cern.ch
+DEBUG 2024-01-16 11:16:46.314 UTC: 	 Command api workflow
+DEBUG 2024-01-16 11:16:46.314 UTC: 	 Encoded data for curl request: subresource=search&workflow=240115_130814%3Acastells_crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018
+DEBUG 2024-01-16 11:16:46.371 UTC: 	 Got information from server oracle database: {'desc': {'columns': ['tm_taskname', 'tm_activity', 'panda_jobset_id', 'tm_task_status', 'tm_task_command', 'tm_start_time', 'tm_start_injection', 'tm_end_injection', 'tm_task_failure', 'tm_job_sw', 'tm_job_arch', 'tm_input_dataset', 'tm_nonvalid_input_dataset', 'tm_use_parent', 'tm_site_whitelist', 'tm_site_blacklist', 'tm_split_algo', 'tm_split_args', 'tm_user_sandbox', 'tm_cache_url', 'tm_username', 'tm_user_dn', 'tm_user_vo', 'tm_user_role', 'tm_user_group', 'tm_publish_name', 'tm_publish_groupname', 'tm_asyncdest', 'tm_dbs_url', 'tm_publish_dbs_url', 'tm_publication', 'tm_outfiles', 'tm_tfile_outfiles', 'tm_edm_outfiles', 'tm_job_type', 'tm_generator', 'tm_events_per_lumi', 'tm_arguments', 'panda_resubmitted_jobs', 'tm_save_logs', 'tw_name', 'tm_user_infiles', 'tm_maxjobruntime', 'tm_numcores', 'tm_maxmemory', 'tm_priority', 'tm_output_dataset', 'tm_task_warnings', 'tm_user_webdir', 'tm_scriptexe', 'tm_scriptargs', 'tm_extrajdl', 'tm_asourl', 'tm_collector', 'tm_schedd', 'tm_dry_run', 'tm_user_files', 'tm_transfer_outputs', 'tm_output_lfn', 'tm_ignore_locality', 'tm_fail_limit', 'tm_one_event_mode', 'tm_secondary_input_dataset', 'tm_primary_dataset', 'tm_last_publication', 'tm_debug_files', 'clusterid', 'tm_asodb', 'tm_ignore_global_blacklist', 'tm_submitter_ip_addr', 'tm_totalunits', 'tm_ddm_reqid', 'tm_user_config', 'tm_transfer_container', 'tm_transfer_rule', 'tm_publish_rule', 'tm_multipub_rule']}, 'result': ['240115_130814:castells_crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018', 'None', 'None', 'SUBMITTED', 'SUBMIT', '2024-01-15 13:08:14.503786', 'None', '2024-01-15 13:09:06.539141', 'None', 'CMSSW_10_6_26', 'slc7_amd64_gcc700', '/HAHMHToAA_AToGG_MA-30GeV_TuneCP5_PSweights_13TeV-madgraph_pythia8/RunIIAutumn18MiniAOD-102X_upgrade2018_realistic_v15-v2/MINIAODSIM', 'F', '0', '[]', '[]', 'Automatic', "{'halt_job_on_file_boundaries': False, 'splitOnRun': False, 'minutes_per_job': 480, 'runs': [], 'lumis': []}", 'aa1fd8ff861c8b476877aa3f2698dd3dce511d39d36edf9dd27bd6c24ba86351.tar.gz', 'https://cmsweb.cern.ch/S3/crabcache_prod', 'castells', '/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=castells/CN=840278/CN=Sergi Castells', 'cms', 'None', 'None', 'crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018-00000000000000000000000000000000', 'F', 'T3_US_NotreDame', 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', 'F', '[]', '[]', "['HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018.root']", 'Analysis', 'pythia', 'None', '{}', 'None', 'T', 'crab-prod-tw01', '[]', '1250', '1', '2500', '30', "['/FakeDataset/fakefile-FakePublish-69dae2044bd927b66f8c8e89a954c174/USER']", '[]', 'http://vocms0195.cern.ch/mon/castells/240115_130814:castells_crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018', 'None', '[]', '[]', 'None', 'cmsgwms-collector-global.cern.ch:9620,cmsgwms-collector-global.fnal.gov:9620', 'crab3@vocms0195.cern.ch', 'F', '[]', 'T', '/store/user/castells/outputs/Signal_MC_2018', 'F', 'None', 'F', 'None', 'HAHMHToAA_AToGG_MA-30GeV_TuneCP5_PSweights_13TeV-madgraph_pythia8', 'None', '8a676a68063a04b43885f59e136fed207b31a166de095d3fc09f512f08e1da83.tar.gz', '97452798', 'None', 'F', '137.138.154.184', '-1.0', 'None', '{"partialdataset": false, "requireaccelerator": false, "acceleratorparams": null, "inputblocks": null}', 'None', 'None', 'None', 'None']}
+INFO 2024-01-16 11:16:46.371 UTC: 	 CRAB project directory:		/eos/home-c/castells/MNConversion/CMSSW_10_6_26/src/hgg_nanoaod_tools/CRAB/MNConversion_crab/crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018
+INFO 2024-01-16 11:16:46.372 UTC: 	 Task name:			240115_130814:castells_crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018
+INFO 2024-01-16 11:16:46.372 UTC: 	 Grid scheduler - Task Worker:	crab3@vocms0195.cern.ch - crab-prod-tw01
+INFO 2024-01-16 11:16:46.372 UTC: 	 Status on the CRAB server:	SUBMITTED
+INFO 2024-01-16 11:16:46.372 UTC: 	 Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/240115_130814%3Acastells_crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018
+INFO 2024-01-16 11:16:46.378 UTC: 	 Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=castells&var-task=240115_130814%3Acastells_crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018&from=1705320494000&to=now
+DEBUG 2024-01-16 11:16:46.379 UTC: 	 The CRAB server submitted your task to the Grid scheduler (cluster ID: 97452798)
+DEBUG 2024-01-16 11:16:46.379 UTC: 	 Webdir is located at http://vocms0195.cern.ch/mon/castells/240115_130814:castells_crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018
+DEBUG 2024-01-16 11:16:46.379 UTC: 	 Encoded data for curl request: subresource=webdirprx&workflow=240115_130814%3Acastells_crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018
+DEBUG 2024-01-16 11:16:46.442 UTC: 	 Proxied webdir is located at https://cmsweb.cern.ch:8443/scheddmon/0195/castells/240115_130814:castells_crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018
+DEBUG 2024-01-16 11:16:46.443 UTC: 	 Retrieving 'status_cache' file from https://cmsweb.cern.ch:8443/scheddmon/0195/castells/240115_130814:castells_crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018/status_cache.pkl
+DEBUG 2024-01-16 11:16:46.443 UTC: 	 Will execute:
+curl -sS --capath /etc/grid-security/certificates --cert /tmp/x509up_u125472 --key /tmp/x509up_u125472 -o /tmp/crab_status-cache-ri3j6chq.pkl -w %"{http_code}" "https://cmsweb.cern.ch:8443/scheddmon/0195/castells/240115_130814:castells_crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018/status_cache.pkl"
+DEBUG 2024-01-16 11:16:46.443 UTC: 	 Executing command :
+ curl -sS --capath /etc/grid-security/certificates --cert /tmp/x509up_u125472 --key /tmp/x509up_u125472 -o /tmp/crab_status-cache-ri3j6chq.pkl -w %"{http_code}" "https://cmsweb.cern.ch:8443/scheddmon/0195/castells/240115_130814:castells_crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018/status_cache.pkl"
+DEBUG 2024-01-16 11:16:46.525 UTC: 	 output : 200
+ error: 
+ retcode : 0
+DEBUG 2024-01-16 11:16:46.525 UTC: 	 exitcode: 0
+stdout: 200
+stderr: 
+error details: 
+DEBUG 2024-01-16 11:16:46.526 UTC: 	 Got information from status cache file: {'0-2': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['T2_CH_CERN', 'T2_CH_CERN'], 'ResidentSetSize': [2373868], 'SubmitTimes': [1705324150.0], 'StartTimes': [1705324208.0], 'EndTimes': [1705325405.0], 'TotalUserCpuTimeHistory': [1061], 'TotalSysCpuTimeHistory': [28], 'WallDurations': [0, 1197.0], 'JobIds': ['97452800.0'], 'State': 'finished', 'RecordedSite': True}, '0-3': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['T2_CH_CERN', 'T2_CH_CERN'], 'ResidentSetSize': [1461720], 'SubmitTimes': [1705324150.0], 'StartTimes': [1705324209.0], 'EndTimes': [1705325398.0], 'TotalUserCpuTimeHistory': [1000], 'TotalSysCpuTimeHistory': [40], 'WallDurations': [0, 1189.0], 'JobIds': ['97452801.0'], 'State': 'finished', 'RecordedSite': True}, '0-1': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['T2_CH_CERN', 'T2_CH_CERN'], 'ResidentSetSize': [2059224], 'SubmitTimes': [1705324151.0], 'StartTimes': [1705324208.0], 'EndTimes': [1705325357.0], 'TotalUserCpuTimeHistory': [1019], 'TotalSysCpuTimeHistory': [33], 'WallDurations': [0, 1149.0], 'JobIds': ['97452802.0'], 'State': 'finished', 'RecordedSite': True}, '0-4': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['T2_CH_CERN', 'T2_CH_CERN'], 'ResidentSetSize': [2368148], 'SubmitTimes': [1705324151.0], 'StartTimes': [1705324208.0], 'EndTimes': [1705325490.0], 'TotalUserCpuTimeHistory': [1008], 'TotalSysCpuTimeHistory': [45], 'WallDurations': [0, 1282.0], 'JobIds': ['97452803.0'], 'State': 'finished', 'RecordedSite': True}, '0-5': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['T2_CH_CERN', 'T2_CH_CERN'], 'ResidentSetSize': [2276896], 'SubmitTimes': [1705324151.0], 'StartTimes': [1705324209.0], 'EndTimes': [1705325293.0], 'TotalUserCpuTimeHistory': [955], 'TotalSysCpuTimeHistory': [25], 'WallDurations': [0, 1084.0], 'JobIds': ['97452804.0'], 'State': 'finished', 'RecordedSite': True}, '1': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['Unknown', 'T2_CH_CERN', 'T2_CH_CERN'], 'ResidentSetSize': [2561904], 'SubmitTimes': [1705325969.0], 'StartTimes': [1705326019.0], 'EndTimes': [1705346431.0], 'TotalUserCpuTimeHistory': [18972], 'TotalSysCpuTimeHistory': [389], 'WallDurations': [8.0, 293.9814250469208, 20412.0], 'JobIds': ['97454383.0'], 'State': 'finished', 'RecordedSite': True}, '2': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['Unknown', 'T2_CH_CERN', 'T2_CH_CERN'], 'ResidentSetSize': [2467788], 'SubmitTimes': [1705325969.0], 'StartTimes': [1705326017.0], 'EndTimes': [1705337868.0], 'TotalUserCpuTimeHistory': [10894], 'TotalSysCpuTimeHistory': [207], 'WallDurations': [8.0, 295.9814250469208, 11851.0], 'JobIds': ['97454384.0'], 'State': 'finished', 'RecordedSite': True}, '3': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['Unknown', 'T2_CH_CERN', 'T2_CH_CERN'], 'ResidentSetSize': [2573276], 'SubmitTimes': [1705325969.0], 'StartTimes': [1705326017.0], 'EndTimes': [1705339905.0], 'TotalUserCpuTimeHistory': [12553], 'TotalSysCpuTimeHistory': [249], 'WallDurations': [10.0, 295.9814250469208, 13888.0], 'JobIds': ['97454385.0'], 'State': 'finished', 'RecordedSite': True}, '4': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['Unknown', 'T2_CH_CERN', 'T2_CH_CERN'], 'ResidentSetSize': [2524292], 'SubmitTimes': [1705325969.0], 'StartTimes': [1705326017.0], 'EndTimes': [1705340249.0], 'TotalUserCpuTimeHistory': [12875], 'TotalSysCpuTimeHistory': [288], 'WallDurations': [8.0, 295.9814250469208, 14232.0], 'JobIds': ['97454386.0'], 'State': 'finished', 'RecordedSite': True}, '5': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['Unknown', 'T2_CH_CERN', 'T2_CH_CERN'], 'ResidentSetSize': [2378828], 'SubmitTimes': [1705325969.0], 'StartTimes': [1705326019.0], 'EndTimes': [1705342328.0], 'TotalUserCpuTimeHistory': [13006], 'TotalSysCpuTimeHistory': [270], 'WallDurations': [8.0, 293.9814250469208, 16309.0], 'JobIds': ['97454387.0'], 'State': 'finished', 'RecordedSite': True}, '6': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['Unknown', 'T2_CH_CERN', 'T2_CH_CERN'], 'ResidentSetSize': [2433452], 'SubmitTimes': [1705325969.0], 'StartTimes': [1705326017.0], 'EndTimes': [1705338643.0], 'TotalUserCpuTimeHistory': [12012], 'TotalSysCpuTimeHistory': [231], 'WallDurations': [8.0, 295.9814250469208, 12626.0], 'JobIds': ['97454388.0'], 'State': 'finished', 'RecordedSite': True}, '7': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['Unknown', 'T2_CH_CERN', 'T2_CH_CERN'], 'ResidentSetSize': [2274704], 'SubmitTimes': [1705325969.0], 'StartTimes': [1705326019.0], 'EndTimes': [1705328350.0], 'TotalUserCpuTimeHistory': [2186], 'TotalSysCpuTimeHistory': [44], 'WallDurations': [8.0, 293.9814250469208, 2331.0], 'JobIds': ['97454389.0'], 'State': 'finished', 'RecordedSite': True}}
+INFO 2024-01-16 11:16:46.526 UTC: 	 Status on the scheduler:	COMPLETED
+INFO 2024-01-16 11:16:46.526 UTC: 	 
+The job splitting of this task is 'Automatic', please refer to this FAQ for a description of the jobs status summary:
+https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3FAQ#What_is_the_Automatic_splitting
+INFO 2024-01-16 11:16:46.526 UTC: 	 More details of Automatic Splitting process for this task (including possible failures) are in the Dagman Log files in:
+https://cmsweb.cern.ch:8443/scheddmon/0195/castells/240115_130814:castells_crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018/AutomaticSplitting/
+INFO 2024-01-16 11:16:46.526 UTC: 	 
+Probe jobs status:              no output    		100.0% (5/5)
+INFO 2024-01-16 11:16:46.527 UTC: 	 
+Main jobs status:               finished     		100.0% (7/7)
+INFO 2024-01-16 11:16:46.527 UTC: 	 
+No publication information (publication has been disabled in the CRAB configuration file)
+INFO 2024-01-16 11:16:46.527 UTC: 	 
+Extended Job Status Table:
+
+ Job State        Most Recent Site        Runtime   Mem (MB)      CPU %    Retries   Restarts      Waste       Exit Code
+ 0-1 no output    T2_CH_CERN              0:19:09       2010         92          0          0    0:00:00               0
+ 0-2 no output    T2_CH_CERN              0:19:57       2318         91          0          0    0:00:00               0
+ 0-3 no output    T2_CH_CERN              0:19:49       1427         87          0          0    0:00:00               0
+ 0-4 no output    T2_CH_CERN              0:21:22       2312         82          0          0    0:00:00               0
+ 0-5 no output    T2_CH_CERN              0:18:04       2223         90          0          0    0:00:00               0
+   1 finished     T2_CH_CERN              5:40:12       2501         95          0          0    0:05:01               0
+   2 finished     T2_CH_CERN              3:17:31       2409         94          0          0    0:05:03               0
+   3 finished     T2_CH_CERN              3:51:28       2512         92          0          0    0:05:05               0
+   4 finished     T2_CH_CERN              3:57:12       2465         92          0          0    0:05:03               0
+   5 finished     T2_CH_CERN              4:31:49       2323         81          0          0    0:05:01               0
+   6 finished     T2_CH_CERN              3:30:26       2376         97          0          0    0:05:03               0
+   7 finished     T2_CH_CERN              0:38:51       2221         96          0          0    0:05:01               0
+DEBUG 2024-01-16 11:16:46.528 UTC: 	 
+ Job Cluster Id
+ 0-2 ['97452800.0']
+ 0-3 ['97452801.0']
+ 0-1 ['97452802.0']
+ 0-4 ['97452803.0']
+ 0-5 ['97452804.0']
+   1 ['97454383.0']
+   2 ['97454384.0']
+   3 ['97454385.0']
+   4 ['97454386.0']
+   5 ['97454387.0']
+   6 ['97454388.0']
+   7 ['97454389.0']
+INFO 2024-01-16 11:16:46.528 UTC: 	 
+Warning: the max jobs runtime is less than 30% of the task requested value (1250 min), please consider to request a lower value for failed jobs (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+INFO 2024-01-16 11:16:46.528 UTC: 	 
+Summary of run jobs:
+ * Memory: 2223MB min, 2512MB max, 2402MB ave
+ * Runtime: 0:18:04 min, 5:40:12 max, 3:38:12 ave
+ * CPU eff: 81% min, 97% max, 92% ave
+ * Waste: 0:35:23 (2% of total)
+
+INFO 2024-01-16 11:16:46.535 UTC: 	 Log file is /eos/home-c/castells/MNConversion/CMSSW_10_6_26/src/hgg_nanoaod_tools/CRAB/MNConversion_crab/crab_MNConversion_HAHMHToAA_AToGG_MA_30GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018/crab.log

@@ -1,0 +1,96 @@
+DEBUG 2023-11-22 10:04:14.078 UTC: 	 CRAB Client version: v3.231010
+DEBUG 2023-11-22 10:04:14.079 UTC: 	 Running on: Linux lxplus746.cern.ch 3.10.0-1160.102.1.el7.x86_64 #1 SMP Tue Oct 17 15:42:21 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2023-11-22 10:04:14.079 UTC: 	 Executing command: 'checkwrite'
+DEBUG 2023-11-22 10:04:14.079 UTC: 	 Found CRAB cache file /afs/cern.ch/user/c/castells/.crab3
+DEBUG 2023-11-22 10:04:14.122 UTC: 	 Checking credentials
+DEBUG 2023-11-22 10:04:14.122 UTC: 	 Found proxy file /tmp/x509up_u125472
+DEBUG 2023-11-22 10:04:14.122 UTC: 	 Making sure it has proper VOMS extension
+DEBUG 2023-11-22 10:04:14.122 UTC: 	 Executing command :
+ voms-proxy-info --vo --file /tmp/x509up_u125472
+DEBUG 2023-11-22 10:04:15.241 UTC: 	 output : cms
+
+ error: 
+ retcode : 0
+DEBUG 2023-11-22 10:04:15.241 UTC: 	 Getting proxy life time left
+DEBUG 2023-11-22 10:04:15.241 UTC: 	 Executing command :
+ voms-proxy-info --actimeleft --timeleft --file /tmp/x509up_u125472
+DEBUG 2023-11-22 10:04:15.872 UTC: 	 output : 42984
+42984
+
+ error: 
+ retcode : 0
+DEBUG 2023-11-22 10:04:15.872 UTC: 	 Proxy valid for 11:56:24 hours
+ERROR 2023-11-22 10:04:15.872 UTC: 	 Error: Please specify the site where to check the write permissions. Use the --site option.
+ERROR 2023-11-22 10:04:15.872 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.231010.00/bin/crab.py", line 159, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.231010.00/bin/crab.py", line 144, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.231010.00/lib/CRABClient/Commands/checkwrite.py", line 20, in __init__
+    SubCommand.__init__(self, logger, cmdargs)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.231010.00/lib/CRABClient/Commands/SubCommand.py", line 380, in __init__
+    self.validateOptions()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.231010.00/lib/CRABClient/Commands/checkwrite.py", line 291, in validateOptions
+    raise ex
+MissingOptionException: [91mError[0m: Please specify the site where to check the write permissions. Use the --site option.
+INFO 2023-11-22 10:04:15.920 UTC: 	 Log file is /eos/home-c/castells/MNConversion/CMSSW_10_6_26/src/crab.log
+DEBUG 2023-11-22 10:04:37.864 UTC: 	 CRAB Client version: v3.231010
+DEBUG 2023-11-22 10:04:37.864 UTC: 	 Running on: Linux lxplus746.cern.ch 3.10.0-1160.102.1.el7.x86_64 #1 SMP Tue Oct 17 15:42:21 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2023-11-22 10:04:37.864 UTC: 	 Executing command: 'checkwrite'
+DEBUG 2023-11-22 10:04:37.864 UTC: 	 Found CRAB cache file /afs/cern.ch/user/c/castells/.crab3
+DEBUG 2023-11-22 10:04:37.864 UTC: 	 Checking credentials
+DEBUG 2023-11-22 10:04:37.864 UTC: 	 Found proxy file /tmp/x509up_u125472
+DEBUG 2023-11-22 10:04:37.864 UTC: 	 Making sure it has proper VOMS extension
+DEBUG 2023-11-22 10:04:37.864 UTC: 	 Executing command :
+ voms-proxy-info --vo --file /tmp/x509up_u125472
+DEBUG 2023-11-22 10:04:38.790 UTC: 	 output : cms
+
+ error: 
+ retcode : 0
+DEBUG 2023-11-22 10:04:38.791 UTC: 	 Getting proxy life time left
+DEBUG 2023-11-22 10:04:38.791 UTC: 	 Executing command :
+ voms-proxy-info --actimeleft --timeleft --file /tmp/x509up_u125472
+DEBUG 2023-11-22 10:04:39.710 UTC: 	 output : 42960
+42960
+
+ error: 
+ retcode : 0
+DEBUG 2023-11-22 10:04:39.711 UTC: 	 Proxy valid for 11:56:00 hours
+DEBUG 2023-11-22 10:04:39.711 UTC: 	 Command use: checkwrite
+DEBUG 2023-11-22 10:04:39.711 UTC: 	 Options use: ['--site', 'T3_US_NotreDame']
+DEBUG 2023-11-22 10:04:39.711 UTC: 	 Instance is None
+DEBUG 2023-11-22 10:04:39.711 UTC: 	 Server base url is None
+DEBUG 2023-11-22 10:04:39.711 UTC: 	 Retrieving username ...
+DEBUG 2023-11-22 10:04:39.711 UTC: 	 Retrieving username from CRIC...
+DEBUG 2023-11-22 10:04:40.648 UTC: 	 username is castells
+INFO 2023-11-22 10:04:40.648 UTC: 	 Will check write permission in the default location /store/user/<username>
+INFO 2023-11-22 10:04:40.648 UTC: 	 Validating LFN /store/user/castells...
+INFO 2023-11-22 10:04:40.648 UTC: 	 LFN /store/user/castells is valid.
+INFO 2023-11-22 10:04:40.684 UTC: 	 Will use `gfal-copy`, `gfal-rm` commands for checking write permissions
+INFO 2023-11-22 10:04:40.684 UTC: 	 Will check write permission in /store/user/castells on site T3_US_NotreDame
+INFO 2023-11-22 10:04:49.587 UTC: 	 Will use PFN: davs://deepthought.crc.nd.edu:1094/store/user/castells/crab3checkwrite_20231122_110440/crab3checkwrite_20231122_110440.tmp
+INFO 2023-11-22 10:04:49.587 UTC: 	 
+Attempting to create (dummy) directory crab3checkwrite_20231122_110440 and copy (dummy) file crab3checkwrite_20231122_110440.tmp to /store/user/castells
+
+INFO 2023-11-22 10:04:49.593 UTC: 	 Executing command: which scram >/dev/null 2>&1 && eval `scram unsetenv -sh`; gfal-copy -p -v -t 180 file:///eos/home-c/castells/MNConversion/CMSSW_10_6_26/src/crab3checkwrite_20231122_110440.tmp 'davs://deepthought.crc.nd.edu:1094/store/user/castells/crab3checkwrite_20231122_110440/crab3checkwrite_20231122_110440.tmp'
+INFO 2023-11-22 10:04:49.593 UTC: 	 Please wait...
+INFO 2023-11-22 10:04:56.166 UTC: 	 
+Successfully created directory crab3checkwrite_20231122_110440 and copied file crab3checkwrite_20231122_110440.tmp to /store/user/castells
+INFO 2023-11-22 10:04:56.167 UTC: 	 
+Attempting to delete file davs://deepthought.crc.nd.edu:1094/store/user/castells/crab3checkwrite_20231122_110440/crab3checkwrite_20231122_110440.tmp
+
+INFO 2023-11-22 10:04:56.167 UTC: 	 Executing command: which scram >/dev/null 2>&1 && eval `scram unsetenv -sh`; gfal-rm -v -t 180 'davs://deepthought.crc.nd.edu:1094/store/user/castells/crab3checkwrite_20231122_110440/crab3checkwrite_20231122_110440.tmp'
+INFO 2023-11-22 10:04:56.167 UTC: 	 Please wait...
+INFO 2023-11-22 10:04:59.209 UTC: 	 
+Successfully deleted file davs://deepthought.crc.nd.edu:1094/store/user/castells/crab3checkwrite_20231122_110440/crab3checkwrite_20231122_110440.tmp
+INFO 2023-11-22 10:04:59.209 UTC: 	 
+Attempting to delete directory davs://deepthought.crc.nd.edu:1094/store/user/castells/crab3checkwrite_20231122_110440/
+
+INFO 2023-11-22 10:04:59.209 UTC: 	 Executing command: which scram >/dev/null 2>&1 && eval `scram unsetenv -sh`; gfal-rm -r -v -t 180 'davs://deepthought.crc.nd.edu:1094/store/user/castells/crab3checkwrite_20231122_110440/'
+INFO 2023-11-22 10:04:59.209 UTC: 	 Please wait...
+INFO 2023-11-22 10:05:02.363 UTC: 	 
+Successfully deleted directory davs://deepthought.crc.nd.edu:1094/store/user/castells/crab3checkwrite_20231122_110440/
+INFO 2023-11-22 10:05:02.367 UTC: 	 
+Checkwrite Result:
+INFO 2023-11-22 10:05:02.367 UTC: 	 Success: Able to write in /store/user/castells on site T3_US_NotreDame

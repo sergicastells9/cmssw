@@ -1,0 +1,64 @@
+Rucio client intialized for account castells
+CRAB project directory:		/eos/home-c/castells/MNConversion/CMSSW_10_6_26/src/hgg_nanoaod_tools/CRAB/MNConversion_crab/crab_MNConversion_HAHMHToAA_AToGG_MA_40GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018
+Task name:			240115_130853:castells_crab_MNConversion_HAHMHToAA_AToGG_MA_40GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018
+Grid scheduler - Task Worker:	crab3@vocms0144.cern.ch - crab-prod-tw01
+Status on the CRAB server:	SUBMITTED
+Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/240115_130853%3Acastells_crab_MNConversion_HAHMHToAA_AToGG_MA_40GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018
+Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=castells&var-task=240115_130853%3Acastells_crab_MNConversion_HAHMHToAA_AToGG_MA_40GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018&from=1705320533000&to=now
+Status on the scheduler:	COMPLETED
+
+The job splitting of this task is 'Automatic', please refer to this FAQ for a description of the jobs status summary:
+https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3FAQ#What_is_the_Automatic_splitting
+More details of Automatic Splitting process for this task (including possible failures) are in the Dagman Log files in:
+https://cmsweb.cern.ch:8443/scheddmon/0144/castells/240115_130853:castells_crab_MNConversion_HAHMHToAA_AToGG_MA_40GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018/AutomaticSplitting/
+
+Probe jobs status:              no output    		100.0% (5/5)
+
+Main jobs status:               finished     		 83.3% (5/6)
+				rescheduled as tail jobs		 16.7% (1/6)
+
+Tail jobs status:               finished     		100.0% (3/3)
+
+No publication information (publication has been disabled in the CRAB configuration file)
+
+Error Summary:
+
+ 1 jobs failed with exit code 50664:
+
+	 1 jobs failed with following error message: (for example, job 0-4)
+
+		Not retrying job due to wall clock limit (job automatically killed on the worker node)
+
+ 1 jobs failed with exit code 50660:
+
+	 1 jobs failed with following error message: (for example, job 2)
+
+		Job killed by HTCondor due to excessive memory use (RSS=2750 MB). Will not retry it.
+
+Have a look at https://twiki.cern.ch/twiki/bin/viewauth/CMSPublic/JobExitCodes for a description of the exit codes.
+
+Extended Job Status Table:
+
+ Job State        Most Recent Site        Runtime   Mem (MB)      CPU %    Retries   Restarts      Waste       Exit Code
+ 0-1 no output    T2_US_Nebraska          0:19:08       2134         90          0          0    0:04:46               0
+ 0-2 no output    T2_US_Nebraska          0:16:19       2294         88          0          0    0:04:46               0
+ 0-3 no output    T2_US_Nebraska          0:17:50       2280         90          0          0    0:04:46               0
+ 0-4 no output    T2_US_MIT               1:00:20       1892         30          0          0    0:04:48           50664
+ 0-5 no output    T2_US_MIT               0:18:01       2025         90          0          0    0:04:44               0
+   1 finished     T2_US_MIT               4:07:05       2074        183          0          0    0:03:49               0
+   2 rescheduled  T2_US_Nebraska          4:50:41       2497         93          0          0    0:03:50           50660
+   3 finished     T2_US_Nebraska          5:28:00       2427         97          0          0    0:03:51               0
+   4 finished     T2_US_Nebraska          8:03:00       2348         95          0          0    0:03:49               0
+   5 finished     T2_US_MIT               4:16:28       1876        156          0          0    0:03:53               0
+   6 finished     T2_US_Nebraska          2:17:55       2298         95          0          0    0:03:50               0
+ 1-1 finished     T2_US_MIT               1:25:50       2051        133          0          0    0:04:13               0
+ 1-2 finished     T2_US_Nebraska          1:15:22       2318         96          0          0    0:04:13               0
+ 1-3 finished     T2_US_MIT               0:53:00       2117         95          0          0    0:04:14               0
+
+Summary of run jobs:
+ * Memory: 2025MB min, 2497MB max, 2223MB ave
+ * Runtime: 0:16:19 min, 8:03:00 max, 3:37:29 ave
+ * CPU eff: 93% min, 183% max, 116% ave
+ * Waste: 0:35:46 (2% of total)
+
+Log file is /eos/home-c/castells/MNConversion/CMSSW_10_6_26/src/hgg_nanoaod_tools/CRAB/MNConversion_crab/crab_MNConversion_HAHMHToAA_AToGG_MA_40GeV_TuneCP5_PSweights_13TeV_madgraph_pythia8_2018/crab.log

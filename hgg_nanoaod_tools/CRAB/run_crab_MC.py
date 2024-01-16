@@ -1,4 +1,5 @@
-# Run this first: source /cvmfs/cms.cern.ch/common/crab-setup.sh
+# Run this first:
+#   source /cvmfs/cms.cern.ch/common/crab-setup.sh
 
 import subprocess
 import os
@@ -27,11 +28,12 @@ config.General.transferOutputs   =  True
 
 config.section_('JobType')
 config.JobType.pluginName        = 'Analysis'
-config.JobType.numCores          = 8
+config.JobType.numCores          = 1
 
 # Name of the CMSSW configuration file
 config.JobType.psetName          = '{cfg}_{year}_cfg.py'
 config.JobType.priority          = 30
+config.JobType.maxMemoryMB       = 2500
 
 config.section_('Data')
 # This string determines the primary dataset of the newly-produced outputs.
@@ -39,15 +41,15 @@ config.Data.inputDataset         = '{dataset}'
 config.Data.inputDBS             = 'global'
 config.Data.splitting            = 'Automatic'
 config.Data.lumiMask             = ''
-# config.Data.unitsPerJob         = 30
+# config.Data.unitsPerJob          = 1
 config.Data.totalUnits           = -1
 config.Data.publication          = False
-config.Data.outLFNDirBase        = '/store/user/castells/outputs/MNConversion_{year}/'
+config.Data.outLFNDirBase        = '/store/user/castells/outputs/Signal_MC_{year}'
 
 # This string is used to construct the output dataset name
 config.section_('Site')
 # Where the output files will be transmitted to
-config.Site.storageSite          = 'T3_CH_CERNBOX'
+config.Site.storageSite          = 'T3_US_NotreDame'
     """
 
     with open(f"{cfg}_{year}_submit.py", "w") as file:
@@ -56,8 +58,10 @@ config.Site.storageSite          = 'T3_CH_CERNBOX'
 def run_crab(args):
     # Remove any previous CRAB submission directories
     if(os.path.exists("./MNConversion_crab/")):
-        shutil.rmtree("./MNConversion_crab/")
-        print("Removed old CRAB submission directories.")
+        print("Need to remove old CRAB submission directories first!")
+        return
+        # shutil.rmtree("./MNConversion_crab/")
+        # print("Removed old CRAB submission directories.")
 
     # Load in datasets from json
     with open("MC_Datasets.json") as file:
@@ -77,20 +81,20 @@ def run_crab(args):
             for dataset in datasets[f"{mc}"][f"{year}"]["files"]:
                 GT = datasets[f"{mc}"][f"{year}"]["GT"]
                 era = datasets[f"{mc}"][f"{year}"]["era"]
-                cfg = dataset.split("/")[1]
+                cfg = dataset.split("/")[1].replace("-","_")
 
-                if "35" not in cfg:
-                    continue
+                # if "15" in cfg:
+                #     continue
 
                 # Generate cfg
-                subprocess.run(["cmsDriver.py", "--python_filename", f"{cfg}_{year}_cfg.py", "--eventcontent", "NANOAODSIM", "--customise", "Configuration/DataProcessing/Utils.addMonitoring", "--datatier", "NANOAODSIM", "--fileout", f"file:{cfg}_{year}.root", "--conditions", f"{GT}", "--step", "NANO", "--filein", f"dbs:{dataset}", "--era", f"Run2_{year},{era}", "--mc", "-n", "-1", "--no_exec", "--nThreads", "8"])
+                subprocess.run(["cmsDriver.py", "--python_filename", f"{cfg}_{year}_cfg.py", "--eventcontent", "NANOAODSIM", "--customise", "Configuration/DataProcessing/Utils.addMonitoring", "--datatier", "NANOAODSIM", "--fileout", f"file:{cfg}_{year}.root", "--conditions", f"{GT}", "--step", "NANO", "--filein", f"dbs:{dataset}", "--era", f"Run2_{year},{era}", "--mc", "-n", "-1", "--no_exec", "--nThreads", "1"])
                 
                 # Generate submit script
                 generateSubmit(dataset, cfg, year)
 
                 if not args.gen:
                     # Submit to CRAB
-                    subprocess.run(f"crab submit -c {cfg}_{year}_submit.py", shell=True)
+                    subprocess.run(f"crab-pre submit -c {cfg}_{year}_submit.py", shell=True)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Specifies what samples to convert from miniAOD to nanoAOD.")
