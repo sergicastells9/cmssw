@@ -6,7 +6,7 @@ import FWCore.ParameterSet.Config as cms
 externalLHEProducer = cms.EDProducer("ExternalLHEProducer",
     nEvents = cms.untracked.uint32(5000),
     outputFile = cms.string('cmsgrid_final.lhe'),
-    scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_xrootd.sh'),
+    scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh'),
     numberOfParameters = cms.uint32(1),
     args = cms.vstring('/eos/user/c/castells/H4g/Gridpacks/hToaaTo4gamma_ma_15_GeV_MLM_4f_max1j_el8_amd64_gcc10_CMSSW_12_4_8_tarball.tar.xz')
 )
